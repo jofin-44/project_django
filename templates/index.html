@@ -1,0 +1,423 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sports Club</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+<body>
+    <!-- Nav Bar Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}" width="80px" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">News</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Achievements</a> -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Contact</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Extra</a>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Student Login</a></li>
+                                <li><a class="dropdown-item" href="#">Staff Login</a></li>
+                                <li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Nav Bar End -->
+
+
+    <!-- Carousel Start -->
+    <section class="hero" id="hero">
+
+        <div id="carouselExampleFade" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-background">
+                        <img src="{% static 'images/allsports7.jpg' %}" alt="">
+                        <div class="carousel-container">
+                            <div class="carousel-content-container">
+                                <h2>where dreams comes true</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, velit.</p>
+                                <div class="buttons">
+                                    <a href="" class="button">Our Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-background">
+                        <img src="{% static 'images/allsports6.jpg' %}" alt="">
+                        <div class="carousel-container">
+                            <div class="carousel-content-container">
+                                <h2>Welcome to sports club</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, rerum?</p>
+                                <div class="buttons">
+                                    <a href="" class="button">Our Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </section>
+    <!-- Carousel End -->
+
+    <!-- Feature Info Section Start -->
+    <section class="feature mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">Professional Tranner</h2>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <img src="Imagesports/Boxing.jpg" width="198px" class="image-fluid" alt="">
+                        </div>
+                        <h3>Boxing</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3>Personal Growth</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum laudantium atque nostrum
+                            officia debitis unde eum repellat cum dicta.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3>Professional Teachers</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum laudantium atque nostrum
+                            officia debitis unde eum repellat cum dicta.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3>Professional Teachers</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum laudantium atque nostrum
+                            officia debitis unde eum repellat cum dicta.</p>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="main-feature-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3>Professional Teachers</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum laudantium atque nostrum
+                            officia debitis unde eum repellat cum dicta.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+    <!-- Feature Info Section End -->
+
+    <!-- About Section Start -->
+    <section class="about">
+        <div class="row">
+            <div class="col-md-6 d-none d-lg-flex">
+                <img src="./Imagesports/allsports3.jpg" width="600" height="300" class="image-fluid" alt="">
+            </div>
+            <div class="col-md-6">
+                <section id="about">
+                    <div class="about-content">
+                        <span>About US</span>
+                        <h2>Welcome to Sports Club</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum id suscipit doloribus cumque,
+                            soluta reiciendis, atque, praesentium aspernatur velit aliquam officia necessitatibus culpa.
+                            Consequuntur magni sed nobis hic obcaecati debitis!</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ipsa? Ex a ipsam
+                            voluptatum dignissimos ad molestiae quod dolorem repellendus deleniti cupiditate modi
+                            maxime,
+                            perspiciatis amet, atque reprehenderit nihil pariatur! Debitis minima labore laboriosam
+                            voluptatum consequatur saepe maxime sint.</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Sports Section Start-->
+    <section class="sports mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">Our club</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="single-sport-box border">
+                        <div class="icon">
+                            <img src="Imagesports/Boxing.jpg" width="198px" class="image-fluid" alt="">
+                        </div>
+                        <h3>Boxing</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-sport-box border">
+                        <div class="icon">
+                            <img src="Imagesports/basketball.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                        </div>
+                        <h3>Basketball</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-sport-box border">
+                        <div class="icon">
+                            <img src="Imagesports/chess2.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                        </div>
+                        <h3>Chess</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-sport-box border">
+                        <div class="icon">
+                            <img src="Imagesports/Football2.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                        </div>
+                        <h3>Football</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-sport-box border">
+                        <div class="icon">
+                            <img src="Imagesports/karate.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                        </div>
+                        <h3>Karate</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-sport-box border">
+                        <div class="icon">
+                            <img src="Imagesports/Volleyball.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                        </div>
+                        <h3>Volleyball</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
+                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <div class="buttons">
+                            <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sports Section End -->
+
+    <!-- gallery Start -->
+    <section class="choose mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">Why we</h2>
+            </div>
+    </section>
+    <!-- gallery Start -->
+
+
+    <!-- Footer Start-->
+    <footer class="text-center text-lg-start text-white pt-4" style="background-color: #065dfb;">
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Sports Club
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">About Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Gallery</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Contact Us</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Privacy and Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terms and Conditions</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p> phenix club, Pune 41221, India </p>
+                        <p>
+                            phenix@gmail.com
+                        </p>
+                        <p> + 91 234 567 88</p>
+                        <p>+ 91 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">All rights reserved.</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer End-->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
