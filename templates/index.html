@@ -12,7 +12,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'student/images' %}"> -->
+
 
 <body>
     <!-- Nav Bar Start -->
@@ -74,8 +76,8 @@
                         <img src="{% static 'images/allsports7.jpg' %}" alt="">
                         <div class="carousel-container">
                             <div class="carousel-content-container">
-                                <h2>where dreams comes true</h2>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, velit.</p>
+                                <h2>Where dreams comes true</h2>
+                                <p>Where Dreams Take Flight: Your Sports Journey Begins Here!</p>
                                 <div class="buttons">
                                     <a href="" class="button">Our Services</a>
                                 </div>
@@ -89,7 +91,7 @@
                         <div class="carousel-container">
                             <div class="carousel-content-container">
                                 <h2>Welcome to sports club</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, rerum?</p>
+                                <p>Where Dreams Take Flight: Your Sports Journey Begins Here!</p>
                                 <div class="buttons">
                                     <a href="" class="button">Our Services</a>
                                 </div>
@@ -115,15 +117,16 @@
     <section class="feature mt-5 mb-5">
         <div class="container">
             <div class="row">
-                <h2 class="text-center">Professional Tranner</h2>
+                <h2 class="text-center">Professional Trainer</h2>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="main-feature-box">
                         <div class="icon">
-                            <img src="Imagesports/Boxing.jpg" width="198px" class="image-fluid" alt="">
+                            <img src="{% static 'images/Boxing.jpg' %}" width="198px" class="image-fluid" alt="">
                         </div>
                         <h3>Boxing</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
-                            eos inventore quidem pariatur unde incidunt distinctio vel!</p>
+                        <p>Dive into college boxing: a realm of strength, skill, and determination. Unleash your
+                            potential, embrace discipline, and join a community where champions are forged. Explore the
+                            adrenaline-filled journey now.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -132,8 +135,9 @@
                             <i class="fa-solid fa-user-tie"></i>
                         </div>
                         <h3>Personal Growth</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum laudantium atque nostrum
-                            officia debitis unde eum repellat cum dicta.</p>
+                        <p>Embark on a transformative journey of self-discovery and personal growth. Cultivate
+                            resilience, embrace challenges, and unfold your potential in a path toward fulfillment and
+                            lasting positive change.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -142,8 +146,9 @@
                             <i class="fa-solid fa-trophy"></i>
                         </div>
                         <h3>Professional Teachers</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum laudantium atque nostrum
-                            officia debitis unde eum repellat cum dicta.</p>
+                        <p>Professional teachers dedicated to nurturing minds, fostering curiosity, and shaping
+                            futures. Our educators bring expertise, passion, and a commitment to excellence in every
+                            classroom, inspiring lifelong learning.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -176,7 +181,7 @@
     <section class="about">
         <div class="row">
             <div class="col-md-6 d-none d-lg-flex">
-                <img src="./Imagesports/allsports3.jpg" width="600" height="300" class="image-fluid" alt="">
+                <img src="{% static 'images/allsports3.jpg' %}" width="600" height="300" class="image-fluid" alt="">
             </div>
             <div class="col-md-6">
                 <section id="about">
@@ -210,7 +215,7 @@
                 <div class="col-lg-4">
                     <div class="single-sport-box border">
                         <div class="icon">
-                            <img src="Imagesports/Boxing.jpg" width="198px" class="image-fluid" alt="">
+                            <img src="{% static 'images/Boxing.jpg' %}" width="198px" class="image-fluid" alt="">
                         </div>
                         <h3>Boxing</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
@@ -223,7 +228,8 @@
                 <div class="col-lg-4">
                     <div class="single-sport-box border">
                         <div class="icon">
-                            <img src="Imagesports/basketball.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                            <img src="{% static 'images/basketball.jpg' %}" width="198px" height="40%"
+                                class="image-fluid" alt="">
                         </div>
                         <h3>Basketball</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
@@ -236,7 +242,8 @@
                 <div class="col-lg-4">
                     <div class="single-sport-box border">
                         <div class="icon">
-                            <img src="Imagesports/chess2.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                            <img src="{% static 'images/chess2.jpg' %}" width="198px" height="40%" class="image-fluid"
+                                alt="">
                         </div>
                         <h3>Chess</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
@@ -249,7 +256,8 @@
                 <div class="col-lg-4">
                     <div class="single-sport-box border">
                         <div class="icon">
-                            <img src="Imagesports/Football2.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                            <img src="{% static 'images/Football2.jpg' %}" width="198px" height="40%"
+                                class="image-fluid" alt="">
                         </div>
                         <h3>Football</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
@@ -262,7 +270,8 @@
                 <div class="col-lg-4">
                     <div class="single-sport-box border">
                         <div class="icon">
-                            <img src="Imagesports/karate.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                            <img src="{% static 'images/karate.jpg' %}" width="198px" height="40%" class="image-fluid"
+                                alt="">
                         </div>
                         <h3>Karate</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
@@ -275,7 +284,8 @@
                 <div class="col-lg-4">
                     <div class="single-sport-box border">
                         <div class="icon">
-                            <img src="Imagesports/Volleyball.jpg" width="198px" height="40%" class="image-fluid" alt="">
+                            <img src="{% static 'images/Volleyball.jpg' %}" width="198px" height="40%"
+                                class="image-fluid" alt="">
                         </div>
                         <h3>Volleyball</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, neque? Sint nesciunt
