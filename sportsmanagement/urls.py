@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from student.views import index
+from staff.views import index,staff
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
+    path('/staffhtml/staffindex',staff,name='staffindex'),
 ]
