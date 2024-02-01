@@ -2,14 +2,14 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 
-def student(request):
-    return render(request,'studenthtml/student.html');
+def Home(request):
+    return render(request,'Homehtml/Home.html');
 
 def login(request):
-    return render(request, 'studenthtml/login.html');
+    return render(request, 'Homehtml/login.html');
 
 def registration(request):
-    return render(request,'studenthtml/registration.html');
+    return render(request,'Homehtml/registration.html');
 
 
 
