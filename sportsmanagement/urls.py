@@ -17,13 +17,12 @@ Including another URLconf
 from django.shortcuts import render, redirect
 from django.contrib import admin
 from django.urls import path
-from student.views import Home, userlogin, registration
+from student.views import Home, userlogin
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',index,name='index'),
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
-    path('registration', registration, name='registration'),
+    # path('registration', registration, name='registration'),
 ]

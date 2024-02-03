@@ -21,23 +21,23 @@ def userlogin(request):
             
     return render(request, 'Homehtml/login.html')
 
-def registration(request):
-    if request.method=='POST':
-        username1=request.POST.get('Name')
-        user_email=request.POST.get('Email')
-        pass1=request.POST.get('Password')
+# def registration(request):
+#     if request.method=='POST':
+#         username1=request.POST.get('Name')
+#         user_email=request.POST.get('Email')
+#         pass1=request.POST.get('Password')
 
-        my_user=User.objects.create_user(username=username1,email=user_email,password=pass1)
-        my_user.save()
+        # my_user=User.objects.create_user(username=username1,email=user_email,password=pass1)
+        # my_user.save()
 
-        Regs=CustomUser(
-            name=username1,
-            email=user_email,
-        )
-        Regs.save()
-        return render(request,'Homehtml/Home.html')
+        # Regs=CustomUser(
+        #     name=username1,
+        #     email=user_email,
+        # )
+        # Regs.save()
+        # return render(request,'Homehtml/Home.html')
 
-    return render(request,'Homehtml/registration.html')
+    # return render(request,'Homehtml/registration.html')
 
 # views.py
 # from django.shortcuts import render, redirect
