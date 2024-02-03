@@ -1,3 +1,6 @@
+{% extends 'basestaff.html' %}
+{% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,15 +77,15 @@
             <h2>U<span class="danger">M</span>S</h2>
         </div>
         <div class="navbar">
-            <a href="index.html">
+            <a href="{% url 'staffindex' %}">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>
-            <a href="timetable.html" onclick="timeTableAll()">
+            <a href="{% url 'timetable' %}" onclick="timeTableAll()">
                 <span class="material-icons-sharp">today</span>
                 <h3>Time Table</h3>
             </a> 
-            <a href="attendance.html">
+            <a href="{% url 'attendance' %}">
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Attendance</h3>
             </a>
@@ -137,3 +140,4 @@
 <script src="app.js"></script>
 
 </html>
+{% endblock content %}

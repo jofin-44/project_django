@@ -1,64 +1,17 @@
+{% extends 'basestaff.html' %}
+{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="shortcut icon" href="{% 'static/staff/staffimg/logo.png' %}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="{% 'static/staff/style.css' %}">
-</head>
-<body>
-
-    <header>
-        <div class="logo" title="University Management System">
-            <img src="{% 'static/staff/staffimg/logo.png' %}" alt="">
-            <h2>U<span class="danger">M</span>S</h2>
-        </div>
-        <div class="navbar">
-            <a href="index.html" class="active">
-                <span class="material-icons-sharp">home</span>
-                <h3>Home</h3>
-            </a>
-            <a href="timetable.html" onclick="timeTableAll()">
-                <span class="material-icons-sharp">today</span>
-                <h3>Time Table</h3>
-            </a> 
-            <a href="attendance.html">
-                <span class="material-icons-sharp">grid_view</span>
-                <h3>Attendance</h3>
-            </a>
-            <a href="studentreview.html">
-                <span class="material-icons-sharp">password</span>
-                <h3>Student Review</h3>
-            </a>
-            <a href="#">
-                <span class="material-icons-sharp" onclick="">logout</span>
-                <h3>Logout</h3>
-            </a>
-        </div>
-        <div id="profile-btn">
-            <span class="material-icons-sharp">person</span>
-        </div>
-        <div class="theme-toggler">
-            <span class="material-icons-sharp active">light_mode</span>
-            <span class="material-icons-sharp">dark_mode</span>
-        </div>
-        
-    </header>
     <div class="container">
         <aside>
             <div class="profile">
                 <div class="top">
                     <div class="profile-photo">
-                        <img src="{% 'static/staff/staffimg/IMG-20221201-WA0037.jpg' %}" alt="">
+                        <img src="{% static 'staff/staffimg/IMG-20221201-WA0037.jpg' %}" alt="">
                     </div>
                     
                 </div>
                 <div class="about">
-                    <h2><b>Anand Gay J</b></h2>
+                    <h2><b>Anand k J</b></h2>
                     <p>12102030</p>
                     <p><b>Physical Instructor</b></p>
                     <h5>DOB</h5>
@@ -66,7 +19,7 @@
                     <h5>Contact</h5>
                     <p>1234567890</p>
                     <h5>Email</h5>
-                    <p>gayjlgbtqhdtv@gmail.com</p>
+                    <p>anandkj@gmail.com</p>
                     <h5>Address</h5>
                     <p>Christ (Deemed To Be University) 30, Valor CT
                         University Road, Pune
@@ -173,21 +126,21 @@
             <div class="leaves">
                 <h2>Coaches on leave</h2>
                 <div class="teacher">
-                    <div class="profile-photo"><img src="{% 'static/staff/staffimg/profile-2.jpeg' %}" alt=""></div>
+                    <div class="profile-photo"><img src="{% static 'staff/staffimg/profile-2.jpeg' %}" alt=""></div>
                     <div class="info">
                         <h3>The Professor</h3>
                         <small class="text-muted">Full Day</small>
                     </div>
                 </div>
                 <div class="teacher">
-                    <div class="profile-photo"><img src="{% 'static/staff/staffimg/profile-3.jpg' %}" alt=""></div>
+                    <div class="profile-photo"><img src="{% static 'staff/staffimg/profile-3.jpg' %}" alt=""></div>
                     <div class="info">
                         <h3>Lisa Manobal</h3>
                         <small class="text-muted">Half Day</small>
                     </div>
                 </div>
                 <div class="teacher">
-                    <div class="profile-photo"><img src="{% 'static/staff/staffimg/profile-4.jpg' %}" alt=""></div>
+                    <div class="profile-photo"><img src="{% static 'staff/staffimg/profile-4.jpg' %}" alt=""></div>
                     <div class="info">
                         <h3>Himanshu Jindal</h3>
                         <small class="text-muted">Full Day</small>
@@ -198,7 +151,4 @@
         </div>
     </div>
 
-    <script src="{% 'static/staff/timeTable.jstimeTable.js' %}"></script>
-    <script src="{% 'static/staff/app.js' %}"></script>
-</body>
-</html>
+    {% endblock content %}

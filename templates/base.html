@@ -32,7 +32,7 @@
                             <a class="nav-link" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">News</a>
@@ -52,8 +52,8 @@
                                 Login
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{%url 'login'%}">Student Login</a></li>
-                                <li><a class="dropdown-item" href="#">Staff Login</a></li>
+                                <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+                                <li><a class="dropdown-item" href="{% url 'staffindex' %}">Staff Login</a></li>
                                 <li>
                             </ul>
                         </li>
