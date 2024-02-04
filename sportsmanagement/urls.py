@@ -19,12 +19,12 @@ from django.contrib import admin
 from django.urls import path
 #from student.views import Home, login
 from staff.views import staffindex, timetable, studentreview, attendance
-from Admin.views import baseadmin,admindash,adminviewqstn,adminviewstd,adminviewtr
+# from Admin.views import baseadmin,admindash,adminviewqstn,adminviewstd,adminviewtr
 from student.views import Home, userlogin
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     # path('registration', registration, name='registration'),
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
@@ -36,11 +36,11 @@ urlpatterns = [
     path('attendance', attendance, name="attendance"),
 
     # admin urls here
-    path('baseadmin',baseadmin,name='baseadmin'),
-    path('admindash',admindash,name='admindash'),
-    path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
-    path('adminviewstd',adminviewstd,name='adminviewstd'),
-    path('adminviewtr',adminviewtr,name='adminviewtr'),
+    # path('baseadmin',baseadmin,name='baseadmin'),
+    # path('admindash',admindash,name='admindash'),
+    # path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
+    # path('adminviewstd',adminviewstd,name='adminviewstd'),
+    # path('adminviewtr',adminviewtr,name='adminviewtr'),
     
     # path('registration', registration, name='registration'),
 ]
