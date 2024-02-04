@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -77,7 +77,7 @@
     <div class="col-md-4 col-xl-3">
       <div class="card bg-c-blue order-card">
         <div class="card-block">
-          <h6 class="m-b-20"> <a href="admin-view-student" style="text-decoration: none;color:white;">Total Students</a>
+          <h6 class="m-b-20"> <a href="{% url 'admin-view-student' %}" style="text-decoration: none;color:white;">Total Students</a>
           </h6>
           <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{ student_count }}</span></h2>
 
@@ -88,7 +88,7 @@
     <div class="col-md-4 col-xl-3">
       <div class="card bg-c-green order-card">
         <div class="card-block">
-          <h6 class="m-b-20"><a href="admin-view-teacher" style="text-decoration: none;color:white;">Total Staff</a>
+          <h6 class="m-b-20"><a href="{% url 'admin-view-teacher' %}" style="text-decoration: none;color:white;">Total Staff</a>
           </h6>
           <h2 class="text-right"><i class="fas fa-chalkboard-teacher f-left"></i><span>{{ teacher_count }}</span></h2>
 
@@ -96,7 +96,7 @@
       </div>
     </div>
 
-    <div class="col-md-4 col-xl-3">
+    <!-- <div class="col-md-4 col-xl-3">
       <div class="card bg-c-yellow order-card">
         <div class="card-block">
           <h6 class="m-b-20"><a href="{% url 'main-view' %}" style="text-decoration: none;color:white;">Total Quizes</a>
@@ -105,9 +105,9 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="col-md-4 col-xl-3">
+    <!-- <div class="col-md-4 col-xl-3">
       <div class="card bg-c-pink order-card">
         <div class="card-block">
           <h6 class="m-b-20"><a href="admin-view-question" style="text-decoration: none;color:white;">Total
@@ -116,7 +116,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
   </div>
@@ -127,5 +127,52 @@
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 
+<div class="bg-secondary rounded h-100 p-4">
+  <h6 class="mb-4">Responsive Table</h6>
+  <div class="table-responsive">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">ZIP</th>
+                  <th scope="col">Status</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th scope="row">1</th>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>jhon@email.com</td>
+                  <td>USA</td>
+                  <td>123</td>
+                  <td>Member</td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>mark@email.com</td>
+                  <td>UK</td>
+                  <td>456</td>
+                  <td>Member</td>
+              </tr>
+              <tr>
+                  <th scope="row">3</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>jacob@email.com</td>
+                  <td>AU</td>
+                  <td>789</td>
+                  <td>Member</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
 
 {% endblock content %}

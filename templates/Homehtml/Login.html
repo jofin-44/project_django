@@ -1,15 +1,14 @@
 {% extends 'base.html'%}
 {% load static %}
 {%block content%}
-<head>
-<link rel="stylesheet" href="{% static 'css/registration.css' %}">
-<title>Login</title>
-</head>
 
-<body>
+
+
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
     <div class="container">
         <div class="center">
             <h1>Login</h1>
+            {{ msg }}
             <form method="POST" action="">
                 {% csrf_token %}
                 <div class="txt_field">

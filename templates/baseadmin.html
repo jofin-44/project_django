@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+{% block content %}
 {% load static %}
 <html lang="en" dir="ltr">
 
@@ -164,7 +165,7 @@
       <i style="left: 200px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <h3>NumCrack</h3>
+      <h3>Sports</h3>
     </div>
     
   </header>
@@ -173,7 +174,7 @@
   <div class="sidebar">
     <center>
 
-      <img src="{% static "image/admin.png" %}" class="profile_image" alt="">
+      <img src="{% static 'image/admin.png' %}" class="profile_image" alt="">
       <h4>{{user.username}}</h4>
 
     </center>
@@ -187,14 +188,14 @@
 
   </div>
   <!--sidebar end-->
-
+  {% endblock content %}
 
   <!--content start-->
   <div class="content">
     <br><br><br><br><br>
-    {% block content %}
+    
 
-    {% endblock content %}
+    
 
 
     <br><br><br>
@@ -202,4 +203,3 @@
   <!--content end-->
 </body>
 
-</html>

@@ -24,7 +24,7 @@ from student.views import Home, userlogin, studentindex, studentattendance, stud
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     # path('registration', registration, name='registration'),
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
@@ -36,7 +36,7 @@ urlpatterns = [
     path('attendance', attendance, name="attendance"),
 
     # admin urls here
-    path('adminbase',adminbase,name='adminbase'),
+    path('baseadmin',baseadmin,name='baseadmin'),
     path('admindash',admindash,name='admindash'),
     path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
     path('adminviewstd',adminviewstd,name='adminviewstd'),
