@@ -17,8 +17,9 @@ Including another URLconf
 from django.shortcuts import render, redirect
 from django.contrib import admin
 from django.urls import path
-from student.views import Home, login
+#from student.views import Home, login
 from staff.views import staffindex, timetable, studentreview, attendance
+from Admin.views import adminbase,admindash,adminviewqstn,adminviewstd,adminviewtr
 from student.views import Home, userlogin
 from django.conf.urls.static import static
 
@@ -27,9 +28,19 @@ urlpatterns = [
     # path('registration', registration, name='registration'),
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
+
+    # staff urls here
     path('staffindex', staffindex, name="staffindex"),
     path('timetable', timetable, name="timetable"),
     path('studentreview', studentreview, name="studentreview"),
     path('attendance', attendance, name="attendance"),
+
+    # admin urls here
+    path('adminbase',adminbase,name='adminbase'),
+    path('admindash',admindash,name='admindash'),
+    path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
+    path('adminviewstd',adminviewstd,name='adminviewstd'),
+    path('adminviewtr',adminviewtr,name='adminviewtr'),
+    
     # path('registration', registration, name='registration'),
 ]

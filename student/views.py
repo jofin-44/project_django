@@ -4,6 +4,20 @@ from django.contrib.auth import authenticate,login
 from student.models import CustomUser
 # Create your views here.
 
+# def register(request):
+#     errors = {}
+#     if request.method == 'POST' :
+
+#         name = request.POST['name'].strip()
+#         register_number = request.POST['register_number'].strip()
+#         course = request.POST['course'].strip()
+#         event_participating = request.POST['event_participating'].strip()
+#         mail = request.POST['mail'].strip()
+
+
+
+        
+
 def Home(request):
     return render(request,'Homehtml/Home.html')
 
