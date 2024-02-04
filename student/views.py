@@ -1,16 +1,82 @@
 from django.shortcuts import render, redirect
-
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login
+from student.models import CustomUser
 # Create your views here.
 
 def Home(request):
-    return render(request,'Homehtml/Home.html');
+    return render(request,'Homehtml/Home.html')
 
-def login(request):
-    return render(request, 'Homehtml/login.html');
+def userlogin(request):
+    if request.method=='POST':
+        username=request.POST.get('username')
+        pass1=request.POST.get('password')
+        user=authenticate(request,username=username,password=pass1)
 
-def registration(request):
-    return render(request,'Homehtml/registration.html');
+        if user is not None:
+            login(request,user)
+            return render(request, 'Homehtml/Home.html')
+        else:
+            redirect('login')
+            
+    return render(request, 'Homehtml/login.html')
 
+# def registration(request):
+#     if request.method=='POST':
+#         username1=request.POST.get('Name')
+#         user_email=request.POST.get('Email')
+#         pass1=request.POST.get('Password')
+
+        # my_user=User.objects.create_user(username=username1,email=user_email,password=pass1)
+        # my_user.save()
+
+        # Regs=CustomUser(
+        #     name=username1,
+        #     email=user_email,
+        # )
+        # Regs.save()
+        # return render(request,'Homehtml/Home.html')
+
+    # return render(request,'Homehtml/registration.html')
+
+# views.py
+# from django.shortcuts import render, redirect
+# from .forms import RegistrationForm, LoginForm
+# from .models import CustomUser
+
+# def home(request):
+#     return render(request, 'Homehtml/home.html')
+
+# def user_login(request):
+#     if request.method == 'POST':
+#         email = request.POST['email']
+#         password = request.POST['password']
+
+        
+#         if CustomUser.objects.filter(email=email, password=password).exists():
+#             return redirect('home')
+#         else:
+#             pass
+
+#     return render(request, 'Homehtml/login.html')
+
+# def user_registration(request):
+#     if request.method == 'POST':
+#         # Handle registration logic here
+#         form = RegistrationForm(request.POST)
+#         if form.is_valid():
+#             # Example: Create a new user and redirect to the home page
+#             CustomUser.objects.create(
+#                 name=form.cleaned_data['name'],
+#                 email=form.cleaned_data['email'],
+#                 password=form.cleaned_data['password']
+#             )
+#             return redirect('home')
+
+#     else:
+#         form = RegistrationForm()
+
+#     return render(request, 'Homehtml/registration.html', {'form': form})
 
 
 
