@@ -35,6 +35,19 @@ def userlogin(request):
             
     return render(request, 'Homehtml/login.html')
 
+def studentindex(request):
+    return render(request,'studenthtml/studentindex.html')
+
+def studentattendance(request):
+    return render(request,'studenthtml/attendance.html')
+
+def studentsupport(request):
+    return render(request,'studenthtml/Student_support.html')
+
+def studentregform(request):
+    return render(request,'studenthtml/RegForm.html')
+
+
 # def registration(request):
 #     if request.method=='POST':
 #         username1=request.POST.get('Name')
