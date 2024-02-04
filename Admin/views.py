@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-def adminbase(request):
-    return render(request,'admin/adminbase.html')
+def baseadmin(request):
+    return render(request,'admin/baseadmin.html')
 
 def admindash(request):
     return render(request,'admin/admindash.html')
