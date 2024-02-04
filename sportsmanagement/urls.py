@@ -16,9 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from student.views import index
+from student.views import index,adminbase,admindash,adminviewqstn,adminviewstd,adminviewtr
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
+    path('adminbase',adminbase,name='adminbase'),
+    path('admindash',admindash,name='admindash'),
+    path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
+    path('adminviewstd',adminviewstd,name='adminviewstd'),
+    path('adminviewtr',adminviewtr,name='adminviewtr'),
 ]
