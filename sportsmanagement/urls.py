@@ -19,12 +19,12 @@ from django.contrib import admin
 from django.urls import path
 #from student.views import Home, login
 from staff.views import staffindex, timetable, studentreview, attendance
-from Admin.views import adminbase,admindash,adminviewqstn,adminviewstd,adminviewtr
+from Admin.views import baseadmin,admindash,adminviewqstn,adminviewstd,adminviewtr
 from student.views import Home, userlogin, studentindex, studentattendance, studentsupport, studentregform
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     # path('registration', registration, name='registration'),
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
