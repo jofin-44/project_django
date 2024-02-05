@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from student.models import CustomUser
 # Create your views here.
 
@@ -42,6 +42,10 @@ def Home(request):
 
 def aboutview(request):
     return render(request, 'Homehtml/about-us.html')
+
+def logout_views(request):
+    logout(request)
+    return redirect('Home')
 
 def userlogin(request):
     if request.method == 'POST':
