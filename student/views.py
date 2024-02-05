@@ -21,6 +21,28 @@ from student.models import CustomUser
 def Home(request):
     return render(request,'Homehtml/Home.html')
 
+# def userlogin(request):
+#     if request.method == 'POST':
+#         username1 = request.POST['username']
+#         password1 = request.POST['password']
+#         print(username1, password1)
+#         user = authenticate(request, username=username1, password=password1)
+#         print(user)
+#         if user is not None:
+#             if user.is_superuser:
+#                 login(request,user)
+#                 return redirect('baseadmin')
+#             else:
+#                 login(request,user)
+#                 return redirect('studentindex')  
+#         else:
+#             msg = "Invalid Credentials. Please try again!"
+#             return render(request, 'Homehtml/login.html', {'msg': msg})
+#     return render(request, 'Homehtml/login.html')
+
+def aboutview(request):
+    return render(request, 'Homehtml/about-us.html')
+
 def userlogin(request):
     if request.method == 'POST':
         username1 = request.POST['username']
@@ -29,7 +51,7 @@ def userlogin(request):
         if user is not None:
             if user.is_superuser:
                 login(request,user)
-                return redirect('baseadmin')
+                return redirect('adminindex')
             elif user.is_staff:
                 login(request, user)
                 return redirect('staffindex')
@@ -40,7 +62,11 @@ def userlogin(request):
             msg = "Invalid Credentials. Please try again!"
             return render(request, 'Homehtml/login.html', {'msg': msg})
     return render(request, 'Homehtml/login.html')
-        
+
+
+
+
+
 # def user_logout(request):
 #     logout(request)
 #     return redirect('user_login')

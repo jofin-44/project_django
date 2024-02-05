@@ -1,205 +1,95 @@
-
-{% block content %}
 {% load static %}
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>College Sports Management Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2c3e50;
+            /* Set your desired background color */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
 
-  <style media="screen">
-    a:link {
-      text-decoration: none;
-    }
+        .dashboard-header {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #297fb8;
+            display: flex;
+            justify-content: space-between;
+            /* Align items horizontally */
+            align-items: center;
+            /* Align items vertically */
+        }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Gill Sans", sans-serif;;
-    }
+        .logout-btn {
+            color: #fff;
+        }
 
-    header {
-      position: fixed;
-      background: #22242A;
-      padding: 20px;
-      width: 100%;
-      z-index: 1;
-    }
+        .sidebar {
+            background-color: #34495e;
+            color: #fff;
+            height: 100vh;
+            padding-top: 20px;
+        }
 
-    .left_area h3 {
-      color: #fff;
-      margin: 0px;
-      text-transform: uppercase;
-      font-size: 22px;
-      font-weight: 900;
-    }
+        .main-content {
+            padding: 20px;
+        }
 
-    .left_area span {
-      color: #19B3D3;
-    }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .logout_btn {
-      padding: 5px;
-      background: #19B3D3;
-      text-decoration: none;
-      float: right;
-      margin-top: -30px;
-      margin-right: 40px;
-      border-radius: 2px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #fff;
-      transition: 0.5s;
+        .card-deck {
+            margin-bottom: 20px;
+        }
 
-    }
+        .quick-links {
+            list-style: none;
+            padding: 0;
+        }
 
-    .logout_btn:hover {
-      background: #0B87A6;
-    }
+        .quick-links li {
+            margin-bottom: 10px;
+        }
 
-    .sidebar {
-      background: #2f323a;
-      margin-top: 70px;
-      padding-top: 30px;
-      position: fixed;
-      left: 0;
-      width: 250px;
-      height: 100%;
-      transition: 0.5s;
-      transition-property: left;
-    }
-
-    .sidebar .profile_image {
-      width: 100px;
-      height: 100px;
-      border-radius: 100px;
-      margin-bottom: 10px;
-    }
-
-    .sidebar h4 {
-      color: #ccc;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-
-    .sidebar a {
-      color: #fff;
-      display: block;
-      width: 100%;
-      line-height: 60px;
-      text-decoration: none;
-      padding-left: 40px;
-      box-sizing: border-box;
-      transition: 0.5s;
-
-    }
-
-    .sidebar a:hover {
-      background: #19B3D3;
-    }
-
-    .sidebar i {
-      padding-right: 10px;
-    }
-
-    label #sidebar_btn {
-      z-index: 1;
-      color: #fff;
-      position: fixed;
-      cursor: pointer;
-      left: 300px;
-      font-size: 20px;
-      margin: 5px 0;
-      transition: 0.5s;
-      transition-property: color;
-    }
-
-    label #sidebar_btn:hover {
-      color: #19B3D3;
-    }
-
-    #check:checked~.sidebar {
-      left: -190px;
-    }
-
-    #check:checked~.sidebar a span {
-      display: none;
-    }
-
-    #check:checked~.sidebar a {
-      font-size: 20px;
-      margin-left: 170px;
-      width: 80px;
-    }
-
-    .content {
-      margin-left: 250px;
-      background: url(background.png) no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 100vh;
-      transition: 0.5s;
-    }
-
-    #check:checked~.content {
-      margin-left: 60px;
-    }
-
-    #check {
-      display: none;
-    }
-  </style>
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-
-
+        .register-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
 
-  <input type="checkbox" id="check">
-  <!--header area start-->
-  <header>
-    <label for="check">
-      <i style="left: 200px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
-    </label>
-    <div class="left_area">
-      <h3>Sports</h3>
-    </div>
+
+    {% block content %}
+
+    {% endblock content %}
     
-  </header>
-  <!--header area end-->
-  <!--sidebar start-->
-  <div class="sidebar">
-    <center>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-      <img src="{% static 'image/admin.png' %}" class="profile_image" alt="">
-      <h4>{{user.username}}</h4>
+    <script>
+        function logout() {
+            // Implement your logout functionality here
+            alert("Logout clicked. Implement your logout functionality.");
+        }
+    </script>
 
-    </center>
-
-    <a href="{% url 'admindash' %}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-    <a href="{% url 'adminviewtr' %}"><i class="fas fa-chalkboard-teacher"></i><span>Teacher</span></a>
-    <a href="{% url 'adminviewstd' %}"><i class="fas fa-user-graduate"></i><span>Student</span></a>
-    <a href="{% url 'adminviewqstn' %}"><i class="fas fa-question-circle"></i><span>See Materials</span></a>
-    
-
-
-  </div>
-  <!--sidebar end-->
-  {% endblock content %}
-
-  <!--content start-->
-  <div class="content">
-    <br><br><br><br><br>
-    
-
-    
-
-
-    <br><br><br>
-  </div>
-  <!--content end-->
 </body>
 
+</html>
