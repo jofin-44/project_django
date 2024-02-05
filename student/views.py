@@ -40,6 +40,8 @@ def Home(request):
 #             return render(request, 'Homehtml/login.html', {'msg': msg})
 #     return render(request, 'Homehtml/login.html')
 
+def aboutview(request):
+    return render(request, 'Homehtml/about-us.html')
 
 def userlogin(request):
     if request.method == 'POST':

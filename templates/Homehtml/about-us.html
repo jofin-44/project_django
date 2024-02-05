@@ -1,0 +1,142 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block content%}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e25050;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+
+    h3 {
+        color: #007BFF;
+    }
+
+    p {
+        color: #555;
+    }
+
+    .achievement {
+        margin-bottom: 30px;
+    }
+
+    td {
+        padding: 30px;
+        text-align: center;
+    }
+
+    tr.bgcolor-orange {
+        background-color: orange;
+    }
+
+    td.footer {
+        padding: 10px 30px;
+        text-align: center;
+        color: #fff;
+        background-color: #007BFF;
+    }
+
+    #content {
+        background-color: #e0beb0;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #imageRow {
+        background-color: rgb(15, 17, 15);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 200px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        width: 150px;
+        margin: 0 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<body>
+
+    <table id="content">
+        <tr>
+            <td colspan="6" id="imageRow">
+                <img src="{% static 'images/troffee2.jpg' %}" alt="Trophy">
+                <img src="{% static 'images/troffee.jpg' %}" alt="Trophy">
+                <img src="{% static 'images/image3.jpg' %}" alt="Sports Image">
+                <img src="{% static 'images/image1.jpg' %}" alt="Sports Image">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="6">
+                <h1>About Us</h1>
+                <div class="achievement">
+                    <h3>Sports Programs:</h3>
+                    <p>A reputable college is likely to offer a diverse range of sports programs, catering to the varied
+                        interests and talents of its student body. This could include organized inter-college
+                        competitions, intra-college leagues, and participation in regional and national sports events.
+                    </p>
+                </div>
+                <div class="achievement">
+                    <h3>Sports Facilities:</h3>
+                    <p>A college of this stature is likely to boast well-equipped sports facilities, including cricket
+                        fields, football grounds, basketball and volleyball courts, athletic tracks, and indoor sports
+                        complexes. The availability of modern amenities contributes to the overall development of
+                        students' physical fitness and sporting skills.
+                    </p>
+                </div>
+                <div class="achievement">
+                    <h3>Achievements and Recognition in Sports:</h3>
+                    <p>Considering the emphasis on excellence in various fields, the college may have notable
+                        achievements in sports as well. This could include winning championships, producing talented
+                        athletes, and earning recognition in inter-collegiate sports competitions.
+                    </p>
+                </div>
+                <div class="achievement">
+                    <h3>Participation in National and International Sporting Events:</h3>
+                    <p>Colleges with a strong sports culture often encourage their athletes to participate in national
+                        and international competitions. This not only showcases the talent of the college but also
+                        provides students with exposure to a broader competitive landscape.
+                    </p>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="bgcolor-blue">
+            <td colspan="6" class="footer">
+                <p style="color: #fff;">Copyright &copy; 2024. All Rights Reserved</p>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // JavaScript to make images display in a row
+        document.getElementById("imageRow").style.display = "flex";
+        document.getElementById("imageRow").style.justifyContent = "center";
+        document.getElementById("imageRow").style.alignItems = "center";
+    </script>
+
+</body>
+
+
+
+{%endblock content%}
