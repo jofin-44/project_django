@@ -4,25 +4,62 @@ from django.contrib.auth import authenticate,login
 from student.models import CustomUser
 # Create your views here.
 
+# def register(request):
+#     errors = {}
+#     if request.method == 'POST' :
+
+#         name = request.POST['name'].strip()
+#         register_number = request.POST['register_number'].strip()
+#         course = request.POST['course'].strip()
+#         event_participating = request.POST['event_participating'].strip()
+#         mail = request.POST['mail'].strip()
+
+
+
+        
+
 def Home(request):
     return render(request,'Homehtml/Home.html')
 
-def about_us_view(request):
+def aboutview(request):
     return render(request, 'Homehtml/about-us.html')
 
 def userlogin(request):
-    if request.method=='POST':
-        username=request.POST.get('username')
-        pass1=request.POST.get('password')
-        user=authenticate(request,username=username,password=pass1)
-
+    if request.method == 'POST':
+        username1 = request.POST['username']
+        password1 = request.POST['password']
+        print(username1, password1)
+        user = authenticate(request, username=username1, password=password1)
+        print(user)
         if user is not None:
-            login(request,user)
-            return render(request, 'Homehtml/Home.html')
+            if user.is_superuser:
+                login(request,user)
+                return redirect('baseadmin')
+            else:
+                login(request,user)
+                return redirect('studentindex')  
         else:
-            redirect('login')
-            
+            msg = "Invalid Credentials. Please try again!"
+            return render(request, 'Homehtml/login.html', {'msg': msg})
     return render(request, 'Homehtml/login.html')
+        
+# def user_logout(request):
+#     logout(request)
+#     return redirect('user_login')
+
+# def userlogin(request):
+#     if request.method=='POST':
+#         username=request.POST.get('username')
+#         pass1=request.POST.get('password')
+#         user=authenticate(request,username=username,password=pass1)
+
+#         if user is not None:
+#             login(request,user)
+#             return render(request, 'Homehtml/Home.html')
+#         else:
+#             redirect('login')
+            
+#     return render(request, 'Homehtml/login.html')
 
 # def registration(request):
 #     if request.method=='POST':
