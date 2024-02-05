@@ -17,7 +17,7 @@ Including another URLconf
 from django.shortcuts import render, redirect
 from django.contrib import admin
 from django.urls import path
-from student.views import Home, userlogin
+from student.views import Home, userlogin, about_us_view
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
     # path('registration', registration, name='registration'),
+     path('aboutus', about_us_view, name='aboutus'),
 ]

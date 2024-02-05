@@ -7,6 +7,9 @@ from student.models import CustomUser
 def Home(request):
     return render(request,'Homehtml/Home.html')
 
+def about_us_view(request):
+    return render(request, 'Homehtml/about-us.html')
+
 def userlogin(request):
     if request.method=='POST':
         username=request.POST.get('username')
