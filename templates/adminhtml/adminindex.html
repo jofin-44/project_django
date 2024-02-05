@@ -1,0 +1,56 @@
+{% extends 'baseadmin.html' %}
+{% block content %}
+{% load static %}
+
+ 
+
+                <div class="main-content">
+                    <!-- Overview Cards -->
+                    <div class="card-deck">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Students</h5>
+                                <p class="card-text">Placeholder for total student count</p>
+                            </div>
+                        </div>
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Staffs</h5>
+                                <p class="card-text">Placeholder for total staff count</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="mt-4">
+                        <h4>Quick Links</h4>
+                        <ul class="quick-links">
+                            <li><a href="#" class="text-info">Manage Students</a></li>
+                            <li><a href="#" class="text-success">Manage Staffs</a></li>
+                            <li><a href="#" class="text-warning">View Attendance</a></li>
+                            <li><a href="register.html" class="text-danger">Register New</a></li>
+                            <!-- Add more links as needed -->
+                        </ul>
+                    </div>
+
+                    <!-- New Registration Section -->
+                    <div class="mt-4 register-form">
+                        <h4 class="text-muted">Register New</h4>
+                        <form action="process_registration.php" method="post">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <!-- Add more registration fields as needed -->
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+
+                </div>
+            
+
+{% endblock content %}
