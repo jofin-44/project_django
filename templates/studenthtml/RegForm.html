@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'basestudent.html' %}
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +15,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./images/logo.png" alt="">
+            <img src="{% static 'student/studentimg/logo.png' %}" alt="">
             <h2>U<span class="danger">M</span>S</h2>
         </div>
         <div class="navbar">
@@ -52,7 +55,7 @@
             <span class="material-icons-sharp">dark_mode</span>
         </div>
         
-    </header>
+    </header> -->
     <style>
     main {
         display: flex;
@@ -127,7 +130,8 @@
     </div>
 </center>
 </main>
-</body>
+<!-- </body>
 
 
-</html>
+</html> -->
+{% endblock content %}
