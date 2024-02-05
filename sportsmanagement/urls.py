@@ -36,16 +36,16 @@ urlpatterns = [
     path('attendance', attendance, name="attendance"),
 
     # admin urls here
-    path('baseadmin',baseadmin,name='baseadmin'),
-    path('admindash',admindash,name='admindash'),
-    path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
-    path('adminviewstd',adminviewstd,name='adminviewstd'),
-    path('adminviewtr',adminviewtr,name='adminviewtr'),
+    # path('baseadmin',baseadmin,name='baseadmin'),
+    # path('admindash',admindash,name='admindash'),
+    # path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
+    # path('adminviewstd',adminviewstd,name='adminviewstd'),
+    # path('adminviewtr',adminviewtr,name='adminviewtr'),
     
     # path('registration', registration, name='registration'),
 
     # student urls here
-    path('studentindex', studentindex, name="studentindex"),
+    path('studentindex/',studentindex, name="studentindex"),
     path('studentattendance', studentattendance, name="studentattendance"),
     path('studentsupport', studentsupport, name="studentsupport"),
     path('studentregform', studentregform, name="studentregform"),

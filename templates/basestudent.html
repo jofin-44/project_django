@@ -19,29 +19,29 @@
             <h2>U<span class="danger">M</span>S</h2>
         </div>
         <div class="navbar">
-            <a href="basestudent.html" class="active">
+            <a href="{% url 'studentindex' %}" class="active">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>
 
-            <a href="attendance.html">
+            <a href="{% url 'studentattendance' %}">
                 <span class="material-icons-sharp">grid_view</span>
                 <h3>Attendance</h3>
             </a>
 
-            <a href="RegForm.html" onclick="timeTableAll()">
+            <a href="{% url 'studentregform' %}" onclick="timeTableAll()">
                 <span class="material-icons-sharp">today</span>
                 <h3>Registration Form</h3>
             </a>
 
-            <a href="Student_support.html">
+            <a href="{% url 'studentsupport' %}">
                 <span class="material-icons-sharp">support</span>
                 <h3>Student Support</h3>
             </a>
-            <a href="password.html">
+            <!-- <a href="password.html">
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
-            </a>
+            </a> -->
             <a href="#">
                 <span class="material-icons-sharp" onclick="">logout</span>
                 <h3>Logout</h3>

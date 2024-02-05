@@ -25,13 +25,14 @@ def userlogin(request):
     if request.method == 'POST':
         username1 = request.POST['username']
         password1 = request.POST['password']
-        print(username1, password1)
         user = authenticate(request, username=username1, password=password1)
-        print(user)
         if user is not None:
             if user.is_superuser:
                 login(request,user)
                 return redirect('baseadmin')
+            elif user.is_staff:
+                login(request, user)
+                return redirect('staffindex')
             else:
                 login(request,user)
                 return redirect('studentindex')  
