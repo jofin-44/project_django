@@ -53,7 +53,7 @@ def userlogin(request):
         if user is not None:
             if user.is_superuser:
                 login(request,user)
-                return redirect('baseadmin')
+                return redirect('admindashboard')
             else:
                 login(request,user)
                 return redirect('studentindex')  
