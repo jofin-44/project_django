@@ -31,6 +31,9 @@ urlpatterns = [
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
     path('logout',logout_views, name='logout'),
+    path('aboutus', aboutview, name='aboutus'),
+    path('AboutUs', AboutUs, name='AboutUs'),
+
 
     # staff urls here
     path('staffindex', staffindex, name="staffindex"),
@@ -54,8 +57,7 @@ urlpatterns = [
     path('studentsupport', studentsupport, name="studentsupport"),
     path('studentregform', studentregform, name="studentregform"),
          
-    path('aboutus', aboutview, name='aboutus'),
-    path('AboutUs', AboutUs, name='AboutUs'),
+ 
 
 
 ]
