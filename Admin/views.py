@@ -7,7 +7,12 @@ from django.contrib.auth import authenticate,login
 
 # @login_required(login_url='login')
 def adminindex(request):
-    return render(request,'adminhtml/adminindex.html')
+    total_students = User.objects.filter(is_superuser=0 ,is_staff=0).count()
+    print(total_students)
+    total_staffs = User.objects.filter(is_superuser=0 ,is_staff=1).count()
+    print(total_staffs)
+
+    return render(request, 'adminhtml/adminindex.html', {'total_students':total_students,'total_staffs':total_staffs})
 
 def adminstaff(request):
     return render(request,'adminhtml/adminstaff.html')
@@ -20,3 +25,7 @@ def adminstudent(request):
 
 # def adminviewtr(request):
 #     return render(request,'admin/adminviewtr.html')
+
+
+# --------count of staff and students---------
+# views.py

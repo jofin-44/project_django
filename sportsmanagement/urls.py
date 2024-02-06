@@ -54,5 +54,5 @@ urlpatterns = [
     path('studentsupport', studentsupport, name="studentsupport"),
     path('studentregform', studentregform, name="studentregform"),
          
-     path('aboutus', aboutview, name='aboutus'),
+    path('aboutus', aboutview, name='aboutus'),
 ]
