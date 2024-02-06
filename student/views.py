@@ -101,6 +101,9 @@ def studentsupport(request):
 def studentregform(request):
     return render(request,'studenthtml/RegForm.html')
 
+def AboutUs(request):
+    return render(request,'Homehtml/AboutUs.html')
+
 
 # def registration(request):
 #     if request.method=='POST':
