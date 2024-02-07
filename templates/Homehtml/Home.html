@@ -250,7 +250,8 @@
                 </div>
 
                 <div class="col-md-6 col-sm-12">
-                    <form method="post" data-form-title="Contact Us">
+                    <form method='POST' data-form-title="Contact Us">
+                        {% csrf_token %}
                         <input type="hidden" data-form-email="true">
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" required="" placeholder="Name*"
