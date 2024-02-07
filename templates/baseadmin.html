@@ -11,6 +11,8 @@
     <!-- Font Awesome CSS for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
 
     <!-- Font Awesome CSS for icons -->
 </head>
@@ -23,17 +25,17 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{% url 'adminindex' %}">
                                 <i class="fas fa-tachometer-alt"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="adminstudent.html">
+                            <a class="nav-link" href="{% url 'adminstudent' %}">
                                 <i class="fas fa-users"></i> Students
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="adminstaff.html">
+                            <a class="nav-link" href="{% url 'adminstaff' %}">
                                 <i class="fas fa-calendar-alt"></i> Staffs
                             </a>
                         </li>
@@ -60,7 +62,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>
