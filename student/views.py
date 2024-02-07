@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
-from student.models import CustomUser
+from student.models import CustomUser, contact, support
 # Create your views here.
 
 # def register(request):
@@ -19,7 +19,16 @@ from student.models import CustomUser
         
 
 def Home(request):
+    if request.method == 'POST':
+        name = request.POST['name'] 
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        contct = contact.objects.create(name=name,email=email,phone=phone,message=message)
+        contct.save()
+        return redirect('Home')
     return render(request,'Homehtml/Home.html')
+
 
 # def userlogin(request):
 #     if request.method == 'POST':
@@ -96,6 +105,14 @@ def studentattendance(request):
     return render(request,'studenthtml/attendance.html')
 
 def studentsupport(request):
+    if request.method == 'POST':
+        name = request.POST['name'] 
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        spprt = support.objects.create(name=name,email=email,phone=phone,message=message)
+        spprt.save()
+        return redirect('studentindex')
     return render(request,'studenthtml/Student_support.html')
 
 def studentregform(request):

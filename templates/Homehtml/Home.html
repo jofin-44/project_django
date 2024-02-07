@@ -250,6 +250,7 @@
                 </p>
             </div>
 
+<<<<<<< HEAD
             <div class="col-md-6 col-sm-12">
                 <form method="post" data-form-title="Contact Us">
                     <input type="hidden" data-form-email="true">
@@ -273,6 +274,33 @@
                     </div>
                 </form>
             </div>
+=======
+                <div class="col-md-6 col-sm-12">
+                    <form method='POST' data-form-title="Contact Us">
+                        {% csrf_token %}
+                        <input type="hidden" data-form-email="true">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" required="" placeholder="Name*"
+                                data-form-field="Name">
+                        </div> <br>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" required="" placeholder="Email*"
+                                data-form-field="Email">
+                        </div><br>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" placeholder="Phone"
+                                data-form-field="Phone">
+                        </div><br>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Message" rows="7"
+                                data-form-field="Message"></textarea>
+                        </div><br>
+                        <div>
+                            <button type="submit" class="btn btn-header mb-5">Contact Us</button>
+                        </div>
+                    </form>
+                </div>
+>>>>>>> 8df5deffb77614acfadacd04440d5aecacd69762
 
             <div class="col-md-6 col-sm-12">
                 <h4>Office Address - Lavasa City</h4>

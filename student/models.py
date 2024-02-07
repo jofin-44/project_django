@@ -1,6 +1,3 @@
-
-
-
 from django.db import models
 # from django.contrib.auth.models import User
 
@@ -26,3 +23,16 @@ class CustomUser(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=255)
+
+
+class contact(models.Model):
+    name = models.CharField(blank=False,max_length=50)
+    email = models.EmailField(blank=False,max_length=200)
+    phone = models.IntegerField(blank=False)
+    message = models.TextField(blank=False,max_length=250)    
+
+class support(models.Model):
+    name = models.CharField(blank=False,max_length=50)
+    email = models.EmailField(blank=False,max_length=200)
+    phone = models.IntegerField(blank=False)
+    message = models.TextField(blank=False,max_length=250)     
