@@ -80,14 +80,14 @@
             color: #fff;
         }
     </style>
-</head> -->
+</head>
 
 <body>
 
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-2 d-none d-md-block sidebar">
+            <!-- <nav class="col-md-2 d-none d-md-block sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -107,13 +107,13 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> -->
 
             <!-- Main content -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="dashboard-header">
+                <!-- <div class="dashboard-header">
                     <h2>Welcome to the Staff Admin Dashboard</h2>
-                </div>
+                </div> -->
 
                 <div class="main-content">
                     <!-- Staff Overview Section -->
@@ -151,8 +151,100 @@
                             <div class="card-body">
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, sem et aliquam laoreet, orci tortor rhoncus elit.</p>
                             </div>
-                        </div>
+                        </div><br><br><br>
                         <!-- Add more cards for additional announcements -->
+
+                        <!-- Student Review -->
+
+                        <!-- <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Admin Panel</title> -->
+                            <style>
+                                /* body {
+                                    font-family: Arial, sans-serif;
+                                    background-color: #f2f2f2;
+                                    margin: 0;
+                                    padding: 0;
+                                } */
+                                .container {
+                                    width: 80%;
+                                    margin: 20px auto;
+                                    background-color: #e57171;
+                                    padding: 20px;
+                                    border-radius: 8px;
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                }
+                                h2 {
+                                    text-align: center;
+                                    color: #333;
+                                }
+                                table {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    margin-top: 20px;
+                                }
+                                th, td {
+                                    border: 1px solid #ddd;
+                                    padding: 12px;
+                                    text-align: left;
+                                }
+                                th {
+                                    background-color: #cd5f5f;
+                                }
+                                tr:nth-child(even) {
+                                    background-color:  #cd5f5f;
+                                }
+                                .delete-btn {
+                                    background-color: #f44336;
+                                    color: white;
+                                    padding: 8px 16px;
+                                    border: none;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                    transition: background-color 0.3s ease;
+                                }
+                                .delete-btn:hover {
+                                    background-color: #d32f2f;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="container">
+                                <h2>Student Assessment Reviews</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Registration Number</th>
+                                            <th>Name</th>
+                                            <th>Department</th>
+                                            <th>Event</th>
+                                            <th>Message</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in std %}
+                                        <tr>
+                                            <td>{{ i.regno }}</td>
+                                            <td>{{ i.name }}</td>
+                                            <td>{{ i.department }}</td>
+                                            <td>{{ i.event }}</td>
+                                            <td>{{ i.message }}</td>
+                                            <td><button class="delete-btn">Delete</button></td>
+                                        </tr>
+                                        {% endfor %}
+                                        <!-- Additional rows can be added here dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        <!-- </body>
+                        </html> -->
+                         
+                        <!-- Student Review ends here -->
+                        
                     </div>
                 </div>
             </main>
