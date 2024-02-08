@@ -19,8 +19,10 @@ from django.contrib import admin
 from django.urls import path
 #from student.views import Home, login
 from staff.views import staffindex, timetable, studentreview, attendance
+from Admin.views import adminindex,adminstaff,adminstudent
+from student.views import Home, userlogin, studentindex, studentattendance, studentsupport, studentregform,aboutview,logout_views, AboutUs, Achievements, upcominggames
 # from Admin.views import baseadmin,admindash,adminviewqstn,adminviewstd,adminviewtr
-from student.views import Home, userlogin, aboutview
+# from student.views import Home, userlogin, aboutview
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -28,6 +30,12 @@ urlpatterns = [
     # path('registration', registration, name='registration'),
     path('',Home,name='Home'),
     path('login',userlogin, name='login'),
+    path('logout',logout_views, name='logout'),
+    path('aboutus', aboutview, name='aboutus'),
+    path('AboutUs', AboutUs, name='AboutUs'),
+    path('Achievements',Achievements, name='achievements'),
+    path('upcominggames',upcominggames,name='Upcominggames'),
+
 
     # staff urls here
     path('staffindex', staffindex, name="staffindex"),
@@ -35,13 +43,23 @@ urlpatterns = [
     path('studentreview', studentreview, name="studentreview"),
     path('attendance', attendance, name="attendance"),
 
-    # admin urls here
-    # path('baseadmin',baseadmin,name='baseadmin'),
-    # path('admindash',admindash,name='admindash'),
-    # path('adminviewqstn',adminviewqstn,name='adminviewqstn'),
-    # path('adminviewstd',adminviewstd,name='adminviewstd'),
-    # path('adminviewtr',adminviewtr,name='adminviewtr'),
+    #admin urls here
+
+
+    path('adminindex',adminindex,name='adminindex'),
+    path('adminstaff',adminstaff,name='adminstaff'),
+    path('adminstudent',adminstudent,name='adminstudent'),
+   
     
     # path('registration', registration, name='registration'),
-     path('aboutus', aboutview, name='aboutus'),
+
+    # student urls here
+    path('studentindex/',studentindex, name="studentindex"),
+    path('studentattendance', studentattendance, name="studentattendance"),
+    path('studentsupport', studentsupport, name="studentsupport"),
+    path('studentregform', studentregform, name="studentregform"),
+         
+ 
+
+
 ]

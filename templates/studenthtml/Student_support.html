@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'basestudent.html' %}
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +10,7 @@
     <title>Student Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="./images/logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> -->
 
     <style>
         body{overflow: hidden;}
@@ -22,11 +25,11 @@
             margin: auto;
         }
     </style>
-</head>
+<!-- </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./images/logo.png" alt="">
+            <img src="{% static 'student/studentimg/logo.png' %}" alt="">
             <h2>U<span class="danger">M</span>S</h2>
         </div>
         <div class="navbar">
@@ -63,13 +66,14 @@
             <span class="material-icons-sharp active">light_mode</span>
             <span class="material-icons-sharp">dark_mode</span>
         </div>
-    </header>
+    </header> -->
 
     <main style="margin-top: 2%;">
         <center>
             <h2>Student Support</h2>
             <br>
                     <form class="contact-form" method="post" data-form-title="Contact Us">
+                        {% csrf_token %}
                         <input type="hidden" data-form-email="true">
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" required="" placeholder="Name*" data-form-field="Name">
@@ -95,13 +99,13 @@
                         <br>City name,
                         <br>Country - Zip Code</p>
         
-                    <h4>Office Address - Pune Co</h4>
+                    <!-- <h4>Office Address - Pune Co</h4>
                     <p>123, Street Name,
                         <br>City name,
                         <br>Country - Zip Code</p>
                     <hr>
                     <h4>Talk To Us Today</h4>
-                    <p>+01-123-456-7890<br>+01-789-456-7890</p>
+                    <p>+01-123-456-7890<br>+01-789-456-7890</p> -->
                 </div>
             </div>
         </div>
@@ -109,7 +113,8 @@
             
     </main>
 
-</body>
+<!-- </body>
 
 <script src="app.js"></script>
-</html>
+</html> -->
+{% endblock content %}

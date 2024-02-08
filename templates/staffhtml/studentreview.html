@@ -1,7 +1,7 @@
 {% extends 'basestaff.html' %}
 {% block content %}
 {% load static %}
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <title>Student Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="./images/logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> -->
 
     <style>
         header{position: relative;}
@@ -69,7 +69,7 @@
 
     </style>
 
-</head>
+<!-- </head>
 <body>
     <header>
         <div class="logo">
@@ -105,27 +105,32 @@
             <span class="material-icons-sharp active">light_mode</span>
             <span class="material-icons-sharp">dark_mode</span>
         </div>
-    </header>
+    </header> -->
 
     <div class="change-password-container">
-        <form action="">
+        <form method='POST' action="{% url 'studentreview' %}">
+            {% csrf_token %}
             <h2>Student Perfomance Review</h2>
-            <p class="text-muted">Your new password must be different from previous used passwords.</p>
+            <p class="text-muted">Student Personal Assesment</p>
             <div class="box">
                 <p class="text-muted">Registration No</p>
-                <input type="text" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" id="currentpass">
+                <input type="text" name="regno" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" id="currentpass">
             </div>
             <div class="box">
                 <p class="text-muted">Name</p>
-                <input type="text" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" id="newpass">
+                <input type="text" name="name" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" id="newpass">
             </div>
             <div class="box">
                 <p class="text-muted">Department</p>
-                <input type="text" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" sty id="confirmpass">
+                <input type="text" name="department" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" sty id="confirmpass">
             </div>
             <div class="box">
                 <p class="text-muted">Event</p>
-                <input type="text" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" id="confirmpass">
+                <input type="text" name="event" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" id="confirmpass">
+            </div><br>
+            <div class="form-group">
+                <textarea class="form-control" style="padding-right: 185px; border-radius: 6px; border: solid rgb(209, 209, 209) 2px;" 
+                name="message" placeholder="Message" rows="7" data-form-field="Message"></textarea>
             </div>
             <br><br>
         
@@ -135,9 +140,9 @@
         </form>    
     </div>
 
-</body>
+<!-- </body>
 
 <script src="app.js"></script>
 
-</html>
+</html> -->
 {% endblock content %}

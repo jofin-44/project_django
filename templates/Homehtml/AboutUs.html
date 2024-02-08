@@ -1,0 +1,546 @@
+
+        {% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ABOUT US</title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Open+Sans" rel="stylesheet">
+
+    <!-- Fonts awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- style sheet --->
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <link href="{% static 'images/logo.png' %}"  rel=icon type=image/x-icon> </head> <body>
+    <section id="home">
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <button class="navbar-toggler mr-auto custom-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="{% static 'images/logo.png' %}"  alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item current">
+                        <a class="nav-link" href="{% url 'Home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#main">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="#gallery">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{%url 'login'%}">Login</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="Blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="add-blog.html">Add Blog</a>
+                    </li> -->
+                    
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Navbar-->
+        
+        <header>
+            <div class="header-overlay"></div>
+            <div class="video-header wrap">
+                <div class="fullscreen-video-wrap">
+                    <video src="{% static 'aboutimg/homevideo.mp4' %}" autoplay loop muted></video>
+                </div>
+                <div class="header-content">
+                    <h1 class="display-4 mb-4">About Us</h1>
+                    <h2 class="mb-5">
+                        "Elevating Excellence: Where Champions Are Forged and Futures Soar – Welcome to Sports College."</h2>
+                    <!-- <p>Unveiling the Unseen: Your Passport to Extraordinary Adventures!</p> -->
+                    <!-- <button onclick="location.href='javascript:'" class="btn btn-header"> Read More</button> -->
+                    <!-- onclick="location.href='javascript:'" class="btn btn-header" -->
+                </div>
+            </div>
+        </header>
+        <!-- end of header section -->
+
+    </section>
+    <!-- end of home section -->
+    <!--Go to top function-->
+    <button class="gotop" onclick="location.href='javascript:'">
+        <span><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+    </button>
+    <!--End of Go to top function-->
+
+    <!-- section main -->
+    <section id="main">
+        <div class="container">
+            <div class="main-header">
+                <h2 class="display-4 mb-3">History </h2>
+                <p>
+                    Established with a profound vision in 1999, Sports College has forged a distinguished 
+                    path in the realm of sports education. Our roots are firmly planted in the belief that
+                     the fusion of athletic prowess and academic rigor cultivates well-rounded individuals 
+                     poised for success. Over the years, we have honed our craft, evolving into a beacon of 
+                     excellence renowned for producing exceptional athletes and scholars alike.
+            <div class="row">
+                
+                <div class="col-md-6 col-sm-12">
+                    <img src="{% static 'aboutimg/vision.jpg' %}" alt="">
+                </div>
+                <div class="col-md-6 col-sm-12 align-self-center">
+                    <div class="main-text">
+                        <h3>Vision</h3>
+                        <p>
+                            Our vision is to be a global leader in sports education, fostering a 
+                            culture of excellence, integrity, and holistic development. We aspire to empower
+                             individuals to achieve their full potential, both on and off the field, and to 
+                             become exemplary role models in their communities. </p>
+
+                       
+                        <hr>
+                        <!-- <span class="pull-left">December 02, 2023</span>
+                        <a href="javascript:;" class="cta">Read More <i class="fa fa-arrow-circle-o-right"
+                                aria-hidden="true"></i></a> -->
+                    </div>
+                </div>
+            </div>
+
+            <!--/one -->
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12  align-self-center">
+                    <div class="main-text text-right">
+                        <h3>Mission</h3>
+
+                        <p>
+                            Our mission at Sports College is to provide a dynamic and supportive environment
+                             where student-athletes can thrive academically, athletically, and personally.
+                              We are committed to delivering high-quality education, elite sports training, 
+                              and comprehensive student support services to help our students excel in their 
+                              chosen fields and contribute positively to society.</p>
+                        <hr>
+                        <!-- <span class="pull-left">December 18, 2023</span>
+                        <a href="javascript:;" class="cta">Read More <i class="fa fa-arrow-circle-o-right"
+                                aria-hidden="true"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 order-first order-lg-last">
+                    <img src="{% static 'aboutimg/goals.jpg' %}" alt="">
+                </div>
+            </div>
+            <!--/two -->
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <img src="{% static 'aboutimg/mission.jpg' %}" alt="">
+                </div>
+                <div class="col-md-6 col-sm-12  align-self-center">
+                    <div class="main-text">
+                        <h3>Our Goal</h3>
+                        <p>
+                            Our goals at Sports College are centered on academic excellence, 
+                            athletic development, character building, community engagement, and
+                             continuous improvement. We are committed to maintaining rigorous
+                              academic standards while providing world-class training facilities 
+                              and coaching to help our student-athletes reach their full potential.</p>
+
+                        
+                        <hr>
+                        <!-- <span class="pull-left">December 10, 2023</span>
+                        <a href="javascript:;" class="cta">Read More <i class="fa fa-arrow-circle-o-right"
+                                aria-hidden="true"></i></a> -->
+
+                    </div>
+                </div>
+            </div>
+            <!--/three -->
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12  align-self-center">
+                    <div class="main-text text-right">
+                        <h3>Achievements</h3>
+                        <p>
+                            Sports College boasts an impressive array of achievements that underscore our
+                             commitment to excellence in both athletics and academics. Our students
+                              consistently excel in various sports competitions, securing numerous 
+                              championships and accolades at regional, national, and international levels. </p>
+                        
+                        <hr>
+                        <!-- <span class="pull-left">December 22, 2023</span>
+                        <a href="javascript:;" class="cta">Read More <i class="fa fa-arrow-circle-o-right"
+                                aria-hidden="true"></i></a> -->
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 order-first order-lg-last">
+                    <img src="{% static 'aboutimg/achievments.jpg' %}" alt="">
+                </div>
+                <!--/four -->
+            </div>
+        </div>
+    </section>
+
+    <!-- end of main section -->
+    <!-- gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="main-header">
+                    <h2 class="display-4 mb-3">Our Sports Programms</h2>
+                    <p>
+                        A reputable college is likely to offer a diverse range of sports programs, catering to the varied
+                        interests and talents of its student body. This could include organized inter-college
+                        competitions, intra-college leagues, and participation in regional and national sports events.</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="javascript:;">
+                            <img src= "{% static 'aboutimg/basketball .jpg' %}""/>
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="javascript:;"> Basketball
+                                </a>
+                            </h4>
+                            <p>
+                                
+                         Our college basketball program is a powerhouse, known for its dynamic 
+                         gameplay and championship-winning tradition. With state-of-the-art 
+                         facilities and expert coaching, we foster a culture of excellence that 
+                         prepares athletes to shine both on the court and beyond.
+                            </p>
+                        </div>
+                        <!-- <div class="card-read-more">
+                            <a href="javascript:;" class="btn btn-block">
+                                Read More
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="javascript:;">
+                            <img src="{% static 'aboutimg/football.jpg' %}" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="javascript:;"> Football
+                                </a>
+                            </h4>
+                            <p>
+                                At Sports College, football isn't just a sport; it's a tradition steeped in 
+                                passion and excellence. Our football program fosters teamwork, skill development,
+                                 and a winning mentality, propelling our teams to victory on both local and 
+                                 national stages.
+                            </p>
+                        </div>
+                        <!-- <div class="card-read-more">
+                            <a href="javascript:;" class="btn btn-block">
+                                Read More
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="javascript:;">
+                            <img src="{% static 'aboutimg/tabletennis.jpg' %}" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="javascript:;">Table Tennis
+                                </a>
+                            </h4>
+                            <p>
+                                
+                                At our college, table tennis is more than just a sport; it's a dynamic arena where skill meets strategy 
+                                and passion fuels competition. With state-of-the-art facilities and expert coaching, our table 
+                                tennis program fosters excellence and cultivates champions.
+                            </p>
+                        </div>
+                        <!-- <div class="card-read-more">
+                            <a href="javascript:;" class="btn btn-block">
+                                Read More
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="javascript:;">
+                            <img src= "{% static 'aboutimg/swimming.jpg' %}" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="javascript:;"> Swimming
+                                </a>
+                            </h4>
+                            <p>
+                                
+
+                                At Sports College, our swimming program epitomizes excellence, boasting 
+                                state-of-the-art facilities and expert coaching. Our swimmers consistently 
+                                demonstrate prowess in the pool, achieving remarkable success at regional 
+                                and national competitions.
+                            </p>
+                        </div>
+                        <!-- <div class="card-read-more">
+                            <a href="javascript:;" class="btn btn-block">
+                                Read More
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="javascript:;">
+                            <img src= "{% static 'aboutimg/cricket.jpg' %}" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="javascript:;"> Cricket
+                                </a>
+                            </h4>
+                            <p>
+                                
+                                At Sports College, cricket isn't just a sport; it's a legacy of excellence. Our cricket program fosters talent, dedication, and teamwork, producing formidable players who compete at the highest levels with skill and sportsmanship.
+                            </p>
+                        </div>
+                        <!-- <div class="card-read-more">
+                            <a href="javascript:;" class="btn btn-block">
+                                Read More
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="javascript:;">
+                            <img src= "{% static 'aboutimg/athletics.jpg' %}" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="javascript:;">Athletics
+                                </a>
+                            </h4>
+                            <p>
+                                At Sports College, athletics is the beating heart of our institution, where passion meets perseverance on the field of competition. Our athletes demonstrate unwavering dedication, striving for excellence and embodying the spirit of sportsmanship in every endeavor.
+                            </p>
+                        </div>
+                        <!-- <div class="card-read-more">
+                            <a href="javascript:;" class="btn btn-block">
+                                Read More
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end of gallery -->
+
+    <!-- about Us -->
+    <section id="about">
+        <div class="container">
+            <div class="row text-center">
+                <div class="main-header">
+                    <h2 class="display-4 mb-3">Our Alumnis</h2>
+                    <p>Our college alumni stand as shining examples of success, making significant strides in both 
+                        the sports arena and diverse professional fields. With their unwavering dedication, resilience, 
+                        and passion instilled during their time at Sports College, they continue to inspire and leave a
+                         lasting impact on society</p>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <img src="{% static 'aboutimg/team_01.png' %}" class="rounded-circle">
+                    </span>
+                    <h4 class="service-heading">Divya Agarwal</h4>
+                    <p class="text-muted">
+                    Divya, a standout alumna of Sports College, showcases unparalleled skill and passion in the
+                     realm of football, emerging as a true trailblazer in the sport. Her dedication and prowess 
+                     on the field exemplify the spirit of excellence and determination instilled in all our alumni.</p>
+                    <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+                    <div class='icon social tw'><i class='fa fa-twitter'></i></div>
+                    <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <img src="{% static 'aboutimg/team_02.jpg' %}" class="rounded-circle">
+                    </span>
+                    <h4 class="service-heading">Ashwin Kumar</h4>
+                    <p class="text-muted">
+                        Ashwin, a standout swimmer and esteemed alumni of our college, embodies the 
+                        spirit of perseverance and excellence in the pool. His dedication and remarkable
+                         achievements serve as an inspiration to aspiring athletes, showcasing the
+                          transformative power of sports education at our institution.</p>
+                    <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+                    <div class='icon social tw'><i class='fa fa-twitter'></i></div>
+                    <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <img src="{% static 'aboutimg/team_03.jpg' %}" class="rounded-circle">
+                    </span>
+                    <h4 class="service-heading">Pooja Sharma</h4>
+                    <p class="text-muted">
+                        Pooja, a stellar alumna of Sports College, showcases unparalleled skill and finesse in the
+                         realm of table tennis. Her achievements on the international stage epitomize the caliber of 
+                         talent cultivated within our institution, inspiring future generations of aspiring athletes.</p>
+                    <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+                    <div class='icon social tw'><i class='fa fa-twitter'></i></div>
+                    <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about Us -->
+
+    <!-- contact Us -->
+    <!-- <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="main-header">
+                    <h2 class="display-4 mb-3">Contact Us Today</h2>
+                    <p>"Contact us today, and let the journey of a lifetime begin with
+                         a single click – your gateway to personalized adventures awaits."
+                          </p>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <form method="post" data-form-title="Contact Us">
+                        <input type="hidden" data-form-email="true">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" required="" placeholder="Name*"
+                                data-form-field="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" required="" placeholder="Email*"
+                                data-form-field="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" placeholder="Phone"
+                                data-form-field="Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Message" rows="7"
+                                data-form-field="Message"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-header mb-5">Contact Us</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <h4>Office Address - Lavasa City</h4>
+                    <p>123, Street Name,
+                        <br>City name,
+                        <br>Country - Zip Code</p>
+
+                    <h4>Office Address - Pune Co</h4>
+                    <p>123, Street Name,
+                        <br>City name,
+                        <br>Country - Zip Code</p>
+                    <hr>
+                    <h4>Talk To Us Today</h4>
+                    <p>+01-123-456-7890<br>+01-789-456-7890</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End of contact Us -->
+
+    <!-- footer section -->
+    <!-- <section id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-10 mx-auto mb-5">
+                    <h4>Our Services</h4>
+                    <hr>
+                    <p>
+                        "Experience unparalleled travel with our comprehensive services, 
+                        where every detail is crafted to transform your journey into a seamless and unforgettable adventure."</p>
+                    <button class="btn btn-footer">Read more</button>
+                </div>
+                <div class="col-md-2 col-sm-10 mx-auto mb-5">
+                    <h4>Quick Links</h4>
+                    <hr>
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="javascript:;">Home</a></li>
+                        <li class="footer-item"><a href="javascript:;">Places</a></li>
+                        <li class="footer-item"><a href="javascript:;">Gallery</a></li>
+                        <li class="footer-item"><a href="javascript:;">About Us</a></li>
+                        <li class="footer-item"><a href="javascript:;">Contact Us</a></li>
+                        <li class="footer-item"><a href="javascript:;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-10 mx-auto mb-5">
+                    <h4>Follow Us</h4>
+                    <hr>
+                    <ul class="footer-list-social">
+                        <li class='icon social fb'><i class='fa fa-facebook'></i></li>
+                        <li class='icon social tw'><i class='fa fa-twitter'></i></li>
+                        <li class='icon social in'><i class='fa fa-linkedin'></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <h4>Subscribe Today</h4>
+                    <hr>
+                    <p>"Subscribe today for a passport to exclusive travel insights, captivating destinations,
+                         and a world of wanderlust delivered right to your inbox."</p>
+                    <div class="subscribe">
+                        <form action="#" class=" mt-4">
+                            <div class="input-group">
+                                <input class="btn" name="email" id="email" type="email" placeholder="Your Email"
+                                    required>
+                                <button class="btn btn-grey" type="submit"><i class="fa fa-paper-plane-o"
+                                        aria-hidden="true"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- end of footer section-->
+
+    <!-- footer-end -->
+    <section id="footer-end">
+        <div class="container">
+            <p> &copy; 2023 JGT BIRD. All rights Reserved. | Designed By John George Thattil</p>
+        </div>
+    </section>
+    <!-- end of footer-end -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- main js -->
+    <script src="{% static 'js/about.js' %}"></script>
+
+    </body>
+    </html>
+
