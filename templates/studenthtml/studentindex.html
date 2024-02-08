@@ -7,7 +7,7 @@
         <div class="profile">
             <div class="top">
                 <div class="profile-photo">
-                    <img src="{% static 'student/studentimg/profile-1.jpg' %}" alt="">
+                    <img src="{% static 'student/studentimg/ogprofilepic.png' %}" alt="">
                 </div>
                 <!-- <div class="info">
                     <p>Hey, <b>Alex</b> </p>
@@ -17,13 +17,13 @@
             <div class="about">
                 <h2><b>{{request.user.username}}</b></h2>
                 <p>2212221</p>
-                <p><b>BSc Data Science</b></p>
+                <p><b>Msc Data Science</b></p>
                 <h5>DOB</h5>
                 <p>29-Feb-2020</p>
                 <h5>Contact</h5>
                 <p>1234567890</p>
                 <h5>Email</h5>
-                <p>alcry@gmail.com</p>
+                <p>arun@gmail.com</p>
                 <h5>Address</h5>
                 <p>Christ (Deemed To Be University) 30, Valor
                     University Road, Pune
@@ -114,40 +114,42 @@
             <h2>Announcements</h2>
             <div class="updates">
                 <div class="message">
-                    <p> <b>Academic</b> Summer training internship with Live Projects.</p>
-                    <small class="text-muted">2 Minutes Ago</small>
+                   <p> <b>Academic</b>  {{ std.message }}</p>
+                    <!-- <small class="text-muted">2 Minutes Ago</small> -->
                 </div>
-                <div class="message">
+                <!-- <div class="message">
                     <p> <b>Co-curricular</b> Global internship oportunity by Student organization.</p>
                     <small class="text-muted">10 Minutes Ago</small>
                 </div>
                 <div class="message">
                     <p> <b>Examination</b> Instructions for Mid Term Examination.</p>
-                    <small class="text-muted">Yesterday</small>
+                    <small class="text-muted">Yesterday</small> -->
                 </div>
             </div>
         </div>
+        
 
         <div class="leaves">
+            <br><br>
             <h2>Teachers on leave</h2>
             <div class="teacher">
-                <div class="profile-photo"><img src="{% static 'student/studentimg/profile-2.jpg' %}" alt=""></div>
+                <!-- <div class="profile-photo"><img src="{% static 'student/studentimg/profile-2.jpg' %}" alt=""></div> -->
                 <div class="info">
-                    <h3>The Professor</h3>
+                    <h3>Ajay Kumar Sir</h3>
                     <small class="text-muted">Full Day</small>
                 </div>
             </div>
             <div class="teacher">
-                <div class="profile-photo"><img src="{% static 'student/studentimg/profile-3.jpg' %}" alt=""></div>
+                <!-- <div class="profile-photo"><img src="{% static 'student/studentimg/profile-3.jpg' %}" alt=""></div> -->
                 <div class="info">
-                    <h3>Lisa Manobal</h3>
+                    <h3>Britto Sir</h3>
                     <small class="text-muted">Half Day</small>
                 </div>
             </div>
             <div class="teacher">
-                <div class="profile-photo"><img src="{% static 'student/studentimg/profile-4.jpg' %}" alt=""></div>
+                <!-- <div class="profile-photo"><img src="{% static 'student/studentimg/profile-4.jpg' %}" alt=""></div> -->
                 <div class="info">
-                    <h3>Himanshu Jindal</h3>
+                    <h3>Sona Ma'am</h3>
                     <small class="text-muted">Full Day</small>
                 </div>
             </div>

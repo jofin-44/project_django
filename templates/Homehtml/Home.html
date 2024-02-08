@@ -49,11 +49,11 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-</section>
+</section><br><br><br>
 <!-- Carousel End -->
 
 <!-- Feature Info Section Start -->
-<section class="feature mt-5 mb-5">
+<!-- <section class="feature mt-5 mb-5">
     <div class="container">
         <div class="row">
             <h2 class="text-center">Professional Trainer</h2>
@@ -99,7 +99,7 @@
                         foster curiosity, nurturing minds in every classroom, ensuring a transformative educational
                         journey for all.</p>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="main-feature-box">
                     <div class="icon">
@@ -110,10 +110,10 @@
                         officia debitis unde eum repellat cum dicta.</p>
                 </div>
             </div> -->
-        </div>
+        <!-- </div>
     </div>
 
-</section>
+</section> -->
 <!-- Feature Info Section End -->
 
 <!-- About Section Start -->
@@ -125,7 +125,7 @@
         <div class="col-md-6">
             <section id="about">
                 <div class="about-content">
-                    <span>About US</span>
+                    <span></span>
                     <h2>Welcome to Sports Club</h2>
                     <p>Welcome to our sports club, where passion meets performance. Founded on the principles of
                         teamwork, dedication, and sportsmanship, we strive to cultivate a community where athletes of
@@ -137,7 +137,7 @@
                         potential.
                     </p>
                     <div class="buttons">
-                        <a href="" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        <a href="{% url 'AboutUs' %}" class="button3">Read More <i class="fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </div>
         </div>
@@ -240,6 +240,58 @@
 </section>
 <!-- Sports Section End -->
 
+<section class="feature mt-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Professional Trainer</h2>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="main-feature-box">
+                    <div class="icon">
+                        <img src="{% static 'images/teacher1.jpg' %}" width="198px" class="image-fluid" alt="">
+                    </div>
+                    <h3> Benjamin Turner</h3>
+                    <p>"Enter college boxing: strength, skill, determination. Unleash potential, embrace discipline.
+                        Join a community where champions are forged. Explore the adrenaline-filled journey now.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="main-feature-box">
+                    <div class="icon">
+                        <img src="{% static 'images/teacher3.jpg' %}" width="198px" class="image-fluid" alt="">
+                    </div>
+                    <h3> Samuel Rodriguez</h3>
+                    <p>Embark on a transformative journey of self-discovery and personal growth. Cultivate
+                        resilience, embrace challenges, and unfold your potential in a path toward fulfillment and
+                        lasting positive change.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="main-feature-box">
+                    <div class="icon">
+                        <img src="{% static 'images/teacher2.jpg' %}" width="198px" class="image-fluid" alt="">
+                    </div>
+                    <h3> Maria Sanchez</h3>
+                    <p>Professional teachers dedicated to nurturing minds, fostering curiosity, and shaping
+                        futures. Our educators bring expertise, passion, and a commitment to excellence in every
+                        classroom, inspiring lifelong learning.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="main-feature-box">
+                    <div class="icon">
+                        <img src="{% static 'images/teacher4.jpg' %}" width="198px" class="image-fluid" alt="">
+                    </div>
+                    <h3>Emily Davis</h3>
+                    <p>Our instructors inspire lifelong learning, shaping futures with expertise and passion. They
+                        foster curiosity, nurturing minds in every classroom, ensuring a transformative educational
+                        journey for all.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>    
+
 <!-- contact Us -->
 <section id="contact">
     <div class="container">
@@ -300,7 +352,7 @@
                 </div>
 
             <div class="col-md-6 col-sm-12">
-                <h4>Office Address - Lavasa City</h4>
+                <h4>Sports College - Lavasa City</h4>
                 <p>123, Street Name,
                     <br>City name,
                     <br>Country - Zip Code
@@ -366,7 +418,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Sports Club
+                        Sports College
                     </h6>
                     <p>
                         Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -382,16 +434,16 @@
                         Products
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Home</a>
+                        <a href="{% url 'Home' %}" class="text-reset">Home</a>
                     </p>
                     <p>
-                        <a href="#" class="text-reset">About Us</a>
+                        <a href="{% url 'AboutUs' %}" class="text-reset">About Us</a>
                     </p>
-                    <p>
+                    <!-- <p>
                         <a href="#!" class="text-reset">Gallery</a>
-                    </p>
+                    </p> -->
                     <p>
-                        <a href="#!" class="text-reset">Contact Us</a>
+                        <a href="#contact" class="text-reset">Contact Us</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -421,9 +473,9 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p> phenix club, Pune 41221, India </p>
+                    <p> Sports club, Pune 41221, India </p>
                     <p>
-                        phenix@gmail.com
+                        sportsclub@gmail.com
                     </p>
                     <p> + 91 234 567 88</p>
                     <p>+ 91 234 567 89</p>
