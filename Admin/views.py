@@ -62,6 +62,8 @@ def newReg(request):
 
         return render(request, 'adminindex.html')
 
+
+
 # def adminviewstd(request):
 #     return render(request,'admin/adminviewstd.html')
 

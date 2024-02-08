@@ -20,7 +20,7 @@ from django.urls import path
 #from student.views import Home, login
 from staff.views import staffindex, timetable, studentreview, attendance
 from Admin.views import adminindex,adminstaff,adminstudent
-from student.views import Home, userlogin, studentindex, studentattendance, studentsupport, studentregform,aboutview,logout_views, AboutUs
+from student.views import Home, userlogin, studentindex, studentattendance, studentsupport, studentregform,aboutview,logout_views, AboutUs, Achievements, upcominggames
 # from Admin.views import baseadmin,admindash,adminviewqstn,adminviewstd,adminviewtr
 # from student.views import Home, userlogin, aboutview
 from django.conf.urls.static import static
@@ -33,6 +33,8 @@ urlpatterns = [
     path('logout',logout_views, name='logout'),
     path('aboutus', aboutview, name='aboutus'),
     path('AboutUs', AboutUs, name='AboutUs'),
+    path('Achievements',Achievements, name='achievements'),
+    path('upcominggames',upcominggames,name='Upcominggames'),
 
 
     # staff urls here
