@@ -54,7 +54,7 @@ def aboutview(request):
 
 def logout_views(request):
     logout(request)
-    return redirect('Home')
+    return redirect('login')
 
 def userlogin(request):
     if request.method == 'POST':

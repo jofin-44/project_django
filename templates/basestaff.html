@@ -14,8 +14,8 @@
 
     <header>
         <div class="logo" title="University Management System">
-            <img src="{% static 'staff/staffimg/logo.png' %}" alt="">
-            <h2>U<span class="danger">M</span>S</h2>
+            <!-- <img src="{% static 'staff/staffimg/logo.png' %}" alt=""> -->
+            <!-- <h2>U<span class="danger">M</span>S</h2> -->
         </div>
         <div class="navbar">
             <a href="{% url 'staffindex' %}" class="active">
@@ -34,7 +34,7 @@
                 <span class="material-icons-sharp">password</span>
                 <h3>Student Review</h3>
             </a>
-            <a href="#">
+            <a href="{% url 'logout' %}">
                 <span class="material-icons-sharp" onclick="">logout</span>
                 <h3>Logout</h3>
             </a>

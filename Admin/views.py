@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
-#from staff.models import review
+from staff.models import review
 from django.db import models
 # from django.contrib.auth.decorators import login_required
 
