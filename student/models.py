@@ -37,3 +37,7 @@ class support(models.Model):
     email = models.EmailField(blank=False,max_length=200)
     phone = models.IntegerField(blank=False)
     message = models.TextField(blank=False,max_length=250)     
+
+
+#---------------------attendance---------------------------
+    # class Student(models.Model):
