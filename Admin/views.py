@@ -1,16 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-def baseadmin(request):
-    return render(request,'admin/baseadmin.html')
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login
+# from django.contrib.auth.decorators import login_required
 
-def admindash(request):
-    return render(request,'admin/admindash.html')
 
-def adminviewqstn(request):
-    return render(request,'admin/adminviewqstn.html')
+# @login_required(login_url='login')
+def adminindex(request):
+    return render(request,'adminhtml/adminindex.html')
 
-def adminviewstd(request):
-    return render(request,'admin/adminviewstd.html')
+def adminstaff(request):
+    return render(request,'adminhtml/adminstaff.html')
 
-def adminviewtr(request):
-    return render(request,'admin/adminviewtr.html')
+def adminstudent(request):
+    return render(request,'adminhtml/adminstudent.html')
+
+# def adminviewstd(request):
+#     return render(request,'admin/adminviewstd.html')
+
+# def adminviewtr(request):
+#     return render(request,'admin/adminviewtr.html')
