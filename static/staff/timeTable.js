@@ -1,54 +1,54 @@
 const Sunday =[
     {   
         time: 'Sunday',
-        roomNumber: 'Holiday',
-        subject: 'No class Available',
+        ground: 'Holiday',
+        session: 'No class Available',
         type: ''
     }
 ]
 const Monday =[
     {   
         time: '09-10 AM',
-        roomNumber: '38-718',
-        subject: 'DBMS130',
+        ground: '38-718',
+        session: 'DBMS130',
         type: 'Lecture'
     },
     {   
         time: '10-11 AM',
-        roomNumber: '38-718',
-        subject: 'MTH166',
+        ground: '38-718',
+        session: 'MTH166',
         type: 'Tutorial'
     },
     {   
         time: '12-01 PM',
-        roomNumber: '38-718',
-        subject: 'NS200',
+        ground: '38-718',
+        session: 'NS200',
         type: 'Lecture'
     }
 ]
 const Tuesday =[
     {   
         time: '09-10 AM',
-        roomNumber: '27-304Y',
-        subject: 'MTH166',
+        ground: '27-304Y',
+        session: 'MTH166',
         type: 'Tutorial'
     },
     {   
         time: '11-12 AM',
-        roomNumber: '28-107',
-        subject: 'CS849',
+        ground: '28-107',
+        session: 'CS849',
         type: 'Lecture'
     },
     {   
         time: '12-01 PM',
-        roomNumber: '28-107',
-        subject: 'CS849',
+        ground: '28-107',
+        session: 'CS849',
         type: 'Lecture'
     },
     {   
         time: '02-03 PM',
-        roomNumber: '38-718',
-        subject: 'NS200',
+        ground: '38-718',
+        session: 'NS200',
         type: 'Lecture'
     }
 ]
@@ -56,14 +56,14 @@ const Tuesday =[
 const Wednesday =[
     {   
         time: '10-11 AM',
-        roomNumber: '33-309',
-        subject: 'DBMS130',
+        ground: '33-309',
+        session: 'DBMS130',
         type: 'Lecture'
     },
     {   
         time: '11-12 AM',
-        roomNumber: '38-719',
-        subject: 'CS200',
+        ground: '38-719',
+        session: 'CS200',
         type: 'Lecture'
     }
 ]
@@ -71,20 +71,20 @@ const Wednesday =[
 const Thursday =[
     {   
         time: '11-12 AM',
-        roomNumber: '33-309',
-        subject: 'MTH166',
+        ground: '33-309',
+        session: 'MTH166',
         type: 'Lecture'
     },
     {   
         time: '01-02 PM',
-        roomNumber: '38-719',
-        subject: 'CS849',
+        ground: '38-719',
+        session: 'CS849',
         type: 'Lecture'
     },
     {   
         time: '02-03 PM',
-        roomNumber: '38-718',
-        subject: 'NS200',
+        ground: '38-718',
+        session: 'NS200',
         type: 'Lecture'
     }
 ]
@@ -92,20 +92,20 @@ const Thursday =[
 const Friday =[
     {   
         time: '10-11 AM',
-        roomNumber: '33-309',
-        subject: 'MEC103',
+        ground: '33-309',
+        session: 'MEC103',
         type: 'Lecture'
     },
     {   
         time: '11-12 AM',
-        roomNumber: '33-309',
-        subject: 'MEC103',
+        ground: '33-309',
+        session: 'MEC103',
         type: 'Lecture'
     },
     {   
         time: '02-03 PM',
-        roomNumber: '33-601',
-        subject: 'CS849',
+        ground: '33-601',
+        session: 'CS849',
         type: 'Tutorial'
     },
 
@@ -114,20 +114,20 @@ const Friday =[
 const Saturday =[
     {   
         time: '09-10 AM',
-        roomNumber: '34-604',
-        subject: 'DBMS130',
+        ground: '34-604',
+        session: 'DBMS130',
         type: 'Tutorial'
     },
     {   
         time: '10-11 AM',
-        roomNumber: '34-604',
-        subject: 'DBMS130',
+        ground: '34-604',
+        session: 'DBMS130',
         type: 'Lecture'
     },
     {   
         time: '01-02 PM',
-        roomNumber: '33-309',
-        subject: 'MTH166',
+        ground: '33-309',
+        session: 'MTH166',
         type: 'Lecture'
     }
 ]

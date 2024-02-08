@@ -50,6 +50,7 @@ body{
     overflow-x: hidden;
     color: var(--color-dark);
     background-color: 	#ff9999;
+    background-image: url('staffimg/background.jpg');
 }
 *{
     color: var(--color-dark);

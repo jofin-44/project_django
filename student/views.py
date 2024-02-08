@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from student.models import CustomUser, contact, support
+from staff.views import review
 # Create your views here.
 
 # def register(request):
@@ -99,7 +100,8 @@ def userlogin(request):
 #     return render(request, 'Homehtml/login.html')
 
 def studentindex(request):
-    return render(request,'studenthtml/studentindex.html')
+    std = review.objects.last()
+    return render(request,'studenthtml/studentindex.html',{'std':std})
 
 def studentattendance(request):
     return render(request,'studenthtml/attendance.html')
