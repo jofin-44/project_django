@@ -25,6 +25,9 @@ def adminstaff(request):
 def adminstudent(request):
     return render(request,'adminhtml/adminstudent.html')
 
+
+
+
 # def adminviewstd(request):
 #     return render(request,'admin/adminviewstd.html')
 

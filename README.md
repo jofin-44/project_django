@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+This Sports Management System streamlines sports education by integrating three modules:
+Admin, Student Login, and Staff Login. Administrators efficiently handle user accounts, while
+students access personalized tools for tracking attendance, results, and support services. The
+Staff Login module enables mentors to monitor student performance and manage attendance,
+fostering collaboration. The dynamic Sports and Events module showcases achievements and
+upcoming events, enhancing community spirit. In summary, this system optimizes administrative
+processes and cultivates a holistic, engaging sports education environment for both students and
+staff.
+=======
 SPORTS MANAGEMENT SYSTEM (GROUP-2)
 
 John George Thattil (23122018),
@@ -57,3 +67,4 @@ Start the application by navigating to the project directory in the terminal.
 Run the command:-- python manage.py runserver.
 Access the application through a web browser at the specified address.
 This Sports Management System offers a holistic and engaging environment for both students and staff, optimizing the overall sports education experience. The intuitive design and diverse functionalities contribute to efficient administration and active participation in sports-related activities.
+>>>>>>> 36a8ffed6c3f8b05a27869b019bf067e5d8151cb

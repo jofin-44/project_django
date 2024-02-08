@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: hsl(0, 4%, 21%);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding-top: 300px;
+        }
+
+        header {
+            background-color: #4517eb;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .card-container {
+            perspective: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+        }
+
+        .match-card {
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            position: relative;
+        }
+
+        .match-card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-face.front {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-face.back {
+            background-color: #e44d26;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
+        }
+
+        .countdown {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #2b16e4;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Upcoming Matches</h1>
+    </header>
+
+    <div class="card-container">
+        <!-- Football Match -->
+        <div class="match-card">
+            <div class="card-face front">
+                <h2>Football Match</h2>
+                <p>Date: February 10, 2024</p>
+                <p>Time: 19:00</p>
+                <p>Teams: Team A vs Team B</p>
+            </div>
+            <div class="card-face back">
+                <h2>Football Match</h2>
+                <div class="countdown" id="countdownMatch1"></div>
+            </div>
+        </div>
+
+        <!-- Volleyball Game -->
+        <div class="match-card">
+            <div class="card-face front">
+                <h2>Volleyball Game</h2>
+                <p>Date: February 15, 2024</p>
+                <p>Time: 16:30</p>
+                <p>Teams: Team C vs Team D</p>
+            </div>
+            <div class="card-face back">
+                <h2>Volleyball Game</h2>
+                <div class="countdown" id="countdownMatch2"></div>
+            </div>
+        </div>
+
+        <!-- Karate Championship -->
+        <div class="match-card">
+            <div class="card-face front">
+                <h2>Karate Championship</h2>
+                <p>Date: February 20, 2024</p>
+                <p>Time: 14:00</p>
+                <p>Participants: Fighter 1 vs Fighter 2</p>
+            </div>
+            <div class="card-face back">
+                <h2>Karate Championship</h2>
+                <div class="countdown" id="countdownMatch3"></div>
+            </div>
+        </div>
+
+        <!-- Chess Tournament -->
+        <div class="match-card">
+            <div class="card-face front">
+                <h2>Chess Tournament</h2>
+                <p>Date: February 25, 2024</p>
+                <p>Time: 12:00</p>
+                <p>Players: Player X vs Player Y</p>
+            </div>
+            <div class="card-face back">
+                <h2>Chess Tournament</h2>
+                <div class="countdown" id="countdownMatch4"></div>
+            </div>
+        </div>
+
+        <!-- Basketball Game -->
+        <div class="match-card">
+            <div class="card-face front">
+                <h2>Basketball Game</h2>
+                <p>Date: March 1, 2024</p>
+                <p>Time: 20:00</p>
+                <p>Teams: Team X vs Team Y</p>
+            </div>
+            <div class="card-face back">
+                <h2>Basketball Game</h2>
+                <div class="countdown" id="countdownMatch5"></div>
+            </div>
+        </div>
+
+        <!-- Boxing Match -->
+        <div class="match-card">
+            <div class="card-face front">
+                <h2>Boxing Match</h2>
+                <p>Date: March 5, 2024</p>
+                <p>Time: 21:30</p>
+                <p>Boxers: Boxer A vs Boxer B</p>
+            </div>
+            <div class="card-face back">
+                <h2>Boxing Match</h2>
+                <div class="countdown" id="countdownMatch6"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; 2024. All Rights Reserved.
+    </footer>
+
+    <script>
+        function updateCountdown(endTime, countdownElement) {
+            const intervalId = setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = endTime - now;
+
+                if (timeLeft <= 0) {
+                    clearInterval(intervalId);
+                    countdownElement.textContent = 'Match is live!';
+                } else {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                    countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                }
+            }, 1000);
+        }
+
+        
+        const endTimeMatch1 = new Date('February 10, 2024 19:00:00').getTime();
+        updateCountdown(endTimeMatch1, document.getElementById('countdownMatch1'));
+
+        const endTimeMatch2 = new Date('February 15, 2024 16:30:00').getTime();
+        updateCountdown(endTimeMatch2, document.getElementById('countdownMatch2'));
+
+        const endTimeMatch3 = new Date('February 20, 2024 14:00:00').getTime();
+        updateCountdown(endTimeMatch3, document.getElementById('countdownMatch3'));
+
+        const endTimeMatch4 = new Date('February 25, 2024 12:00:00').getTime();
+        updateCountdown(endTimeMatch4, document.getElementById('countdownMatch4'));
+
+        const endTimeMatch5 = new Date('March 1, 2024 20:00:00').getTime();
+        updateCountdown(endTimeMatch5, document.getElementById('countdownMatch5'));
+
+        const endTimeMatch6 = new Date('March 5, 2024 21:30:00').getTime();
+        updateCountdown(endTimeMatch6, document.getElementById('countdownMatch6'));
+    </script>
+
+{%endblock content%}

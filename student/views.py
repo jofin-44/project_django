@@ -121,6 +121,12 @@ def studentregform(request):
 def AboutUs(request):
     return render(request,'Homehtml/AboutUs.html')
 
+def Achievements(request):
+    return render(request,'Homehtml/Achievements.html')
+
+def upcominggames(request):
+    return render(request,'Homehtml/upcominggames.html')
+
 
 # def registration(request):
 #     if request.method=='POST':
