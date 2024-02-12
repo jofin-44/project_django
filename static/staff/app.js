@@ -37,8 +37,8 @@ let setData = (day) =>{
         const tr = document.createElement('tr');
         const trContent = `
                             <td>${sub.time}</td>
-                            <td>${sub.roomNumber}</td>
-                            <td>${sub.subject}</td>
+                            <td>${sub.ground}</td>
+                            <td>${sub.session}</td>
                             <td>${sub.type}</td>
                         `
         tr.innerHTML = trContent;
