@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from staff.models import review
+from student.models import support
 from Admin.models import New_Reg
 from django.db import models
 from django.db import IntegrityError
@@ -25,7 +26,8 @@ def adminstaff(request):
     return render(request,'adminhtml/adminstaff.html', {'std':std})
 
 def adminstudent(request):
-    return render(request,'adminhtml/adminstudent.html')
+    students = support.objects.all()
+    return render(request,'adminhtml/adminstudent.html',{'students':students})
 
 def newReg(request):
     if request.method == 'POST':
@@ -61,6 +63,8 @@ def newReg(request):
     else:
 
         return render(request, 'adminindex.html')
+    
+
 
 
 

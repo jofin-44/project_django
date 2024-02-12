@@ -117,29 +117,36 @@
                     <!-- Student Attendance Section -->
                     <div class="mt-4">
                         <h4>Student Attendance</h4>
+
                         <!-- Replace the following with actual attendance-related content -->
                         <table class="table">
+
                             <thead>
                                 <tr>
-                                    <th scope="col">Student ID</th>
+                                    <!-- <th scope="col">Student ID</th> -->
                                     <th scope="col">Name</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Session</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Message</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for i in students %}
+
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>John Doe</td>
-                                    <td>2024-02-10</td>
-                                    <td>Morning</td>
-                                    <td>Present</td>
+                            
+                                    <td>{{ i.name }}</td>
+                                    <td>{{ i.email }}</td>
+                                    <td>{{ i.phone }}</td>
+                                    <td>{{ i.message }}</td>
                                 </tr>
+                                {% endfor %}
                                 <!-- Add more rows as needed -->
                             </tbody>
                         </table>
                     </div>
+                    
+
 
                     <!-- Student Support Messages Section -->
                     <!-- <!DOCTYPE html>
@@ -151,25 +158,7 @@
                         <link rel="stylesheet" href="styles.css">
                     </head>
                     <body> -->
-                        <div class="admin-panel">
-                            <h2>Student Support Complaints</h2>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Registration Number</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone Number</th>
-                                        <th>Message</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="complaints-table">
-                                    <!-- Complaints will be dynamically added here -->
-                                </tbody>
-                            </table>
-                        </div>
-                    
+                       
                         <!-- <script src="script.js"></script>
                     </body>
                     </html> -->

@@ -29,11 +29,11 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: #0e4885;
+    background-color: #b9c6d4;
 }
 
 table tr:hover {
-    background-color: #340ada;
+    background-color: #9d99b0;
 }
 
 .action-btn {
